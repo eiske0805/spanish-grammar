@@ -1,42 +1,24 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import { Box, Heading, Flex, Spacer } from "@chakra-ui/react"
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+import About from "./about"
+import Menu from "./menu"
 
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = ({ siteTitle, siteDescription }) => {
+  return (
+    <Box as="header">
+      <Heading as="h1" fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>
+        <Link to="/">{siteTitle} </Link>
+      </Heading>
+      <Flex as="nav">
+        <Spacer />
+        <About siteDescription={siteDescription} />
+        <Menu />
+      </Flex>
+    </Box>
+  )
 }
 
 export default Header

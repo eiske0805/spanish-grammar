@@ -1,55 +1,40 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Box, Container } from "@chakra-ui/react"
 
 import Header from "./header"
-import "./layout.css"
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
   `)
-
+  const siteTitle = data.site.siteMetadata.title
+  const siteDescription = data.site.siteMetadata.description
+  const year = new Date().getFullYear()
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
+      <Container maxW="container.xl" py="4">
+        <Header siteTitle={siteTitle} siteDescription={siteDescription} />
+        <Box as="main" mt={{ base: 5, sm: 7, md: 9 }}>
+          {children}
+        </Box>
+        <Box
+          as="footer"
+          fontSize={{ base: "sm", sm: "md", md: "xl" }}
+          mt={{ base: 10, sm: 28, md: 36 }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+          {`copyright ${year} ${siteTitle}`}{" "}
+        </Box>
+      </Container>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
