@@ -12,7 +12,7 @@ const Header = ({ siteTitle, siteDescription }) => {
       <Heading as="h1" fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }}>
         <Link to="/">{siteTitle} </Link>
       </Heading>
-      <Flex as="nav">
+      <Flex as="nav" mt="4">
         <Spacer />
         <About siteDescription={siteDescription} />
         <Menu />

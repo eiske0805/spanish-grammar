@@ -1,16 +1,16 @@
 import { extendTheme } from "@chakra-ui/react"
 import theme from "./theme"
 
-const articleTheme = extendTheme({
+const tagTemplateTheme = extendTheme({
   ...theme,
   styles: {
     global: {
       body: {
-        backgroundColor: "cYellow",
-        color: "cBlue",
+        backgroundColor: "cGray",
+        color: "cBeige",
       },
     },
   },
 })
 
-export default articleTheme
+export default tagTemplateTheme

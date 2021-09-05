@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import kebabCase from "lodash/kebabCase"
-import { List, ListItem } from "@chakra-ui/react"
+import { UnorderedList, ListItem } from "@chakra-ui/react"
 
 const TagMenu = ({ onClose }) => {
   const data = useStaticQuery(graphql`
@@ -24,15 +24,18 @@ const TagMenu = ({ onClose }) => {
   `)
   const group = data.allMdx.group
   return (
-    <List>
+    <UnorderedList>
+      <ListItem as="li" mt="2" onClick={onClose}>
+        <Link to="/">トップページへ</Link>
+      </ListItem>
       {group.map(({ fieldValue, totalCount }) => (
-        <ListItem key={fieldValue} onClick={onClose}>
+        <ListItem as="li" mt="2" key={fieldValue} onClick={onClose}>
           <Link to={`/tags/${kebabCase(fieldValue)}`}>
-            {`${fieldValue} [${totalCount}]`}
+            {`${fieldValue}（${totalCount}件）`}
           </Link>
         </ListItem>
       ))}
-    </List>
+    </UnorderedList>
   )
 }
 export default TagMenu

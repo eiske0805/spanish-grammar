@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import {
   Drawer,
   DrawerBody,
@@ -7,11 +6,12 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
+  DrawerFooter,
   useDisclosure,
-  IconButton,
+  Button,
 } from "@chakra-ui/react"
-import { HamburgerIcon } from "@chakra-ui/icons"
 
+import PrimaryButton from "./primaryButton"
 import TagMenu from "./tagMenu"
 
 const Menu = () => {
@@ -20,13 +20,19 @@ const Menu = () => {
 
   return (
     <>
-      <IconButton
-        aria-label="ハンバーガーボタン"
-        icon={<HamburgerIcon />}
+      <Button
+        aria-label="メニューボタン"
         onClick={onOpen}
-        variant="unstyled"
+        variant="outline"
         _focus={{ outline: "none" }}
-      />
+        size={{ base: "sm", sm: "md", md: "xl" }}
+        fontSize={{ base: "sm", sm: "md", md: "xl" }}
+        borderColor="cBridge"
+        p="1"
+        ml="3"
+      >
+        menú
+      </Button>
       <Drawer
         isOpen={isOpen}
         placement="left"
@@ -37,10 +43,14 @@ const Menu = () => {
         <DrawerContent bg="cRed" color="cWhite">
           <DrawerCloseButton _focus={{ outline: "none" }} />
           <DrawerHeader>カテゴリー</DrawerHeader>
-
           <DrawerBody>
             <TagMenu onClose={onClose} />
           </DrawerBody>
+          <DrawerFooter>
+            <PrimaryButton bg="cWhite" color="cRed" size="sm" onClick={onClose}>
+              閉じる
+            </PrimaryButton>
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>

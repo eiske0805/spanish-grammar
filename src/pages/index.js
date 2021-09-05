@@ -1,10 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { Box, Heading, Text, Flex } from "@chakra-ui/react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import { List } from "@chakra-ui/react"
 
 import Seo from "../components/Seo"
+import ArticleItems from "../components/articleItems"
 
 export const pageQuery = graphql`
   query {
@@ -23,54 +22,20 @@ export const pageQuery = graphql`
         slug
       }
     }
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
   }
 `
 
-const TagsPage = ({ data }) => {
+const IndexPage = ({ data }) => {
   return (
     <>
       <Seo title="トップページ" />
-      {/* <StaticImage
-        src="../images/gatsby-astronaut.png"
-        width={300}
-        quality={95}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="A Gatsby astronaut"
-        style={{ marginBottom: `1.45rem` }}
-      /> */}
-      {data.allMdx.nodes.map(node => (
-        <Box as="article" mb={{ base: 5, sm: 7, md: 9 }} key={node.id}>
-          <Link to={`/${node.slug}`}>
-            <Flex>
-              <Box
-                flexBasis={{ base: "70px", sm: "120px" }}
-                flexShrink="0"
-                mr={4}
-              >
-                <GatsbyImage
-                  image={getImage(node.frontmatter.hero_image)}
-                  alt={node.frontmatter.hero_image_alt}
-                  imgStyle={{ borderRadius: "5px" }}
-                />
-              </Box>
-              <Box>
-                <Heading as="h2" fontSize={{ base: "sm", sm: "md", md: "xl" }}>
-                  {node.frontmatter.title}
-                </Heading>
-              </Box>
-            </Flex>
-          </Link>
-        </Box>
-      ))}
+      <List mt={{ base: 12, sm: 16, md: 20 }}>
+        {data.allMdx.nodes.map(node => (
+          <ArticleItems node={node} key={node.id} />
+        ))}
+      </List>
     </>
   )
 }
 
-export default TagsPage
+export default IndexPage

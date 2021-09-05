@@ -1,17 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import {
-  Box,
-  Heading,
-  List,
-  ListItem,
-  Flex,
-  Spacer,
-  Text,
-} from "@chakra-ui/react"
+import { Heading, List, ChakraProvider } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
+import ArticleItems from "../components/articleItems"
+import tagTemplateTheme from "../theme/tagTemplateTheme"
 
 export const query = graphql`
   query ($tag: String) {
@@ -21,16 +15,18 @@ export const query = graphql`
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
-      edges {
-        node {
-          excerpt
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            tags
+      nodes {
+        frontmatter {
+          title
+          hero_image_alt
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
-          slug
         }
+        id
+        slug
       }
     }
   }
@@ -38,44 +34,24 @@ export const query = graphql`
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMdx
+  const { nodes, totalCount } = data.allMdx
 
   return (
-    <>
+    <ChakraProvider theme={tagTemplateTheme}>
       <Seo title={`${tag}タグ`} />
-
-      <Heading as="h2">{`${tag}には${totalCount}件の記事があります。`}</Heading>
-
+      <Heading
+        as="h2"
+        fontSize={{ base: "lg", md: "xl" }}
+        my={{ base: 12, sm: 16, md: 20 }}
+      >
+        {`「 ${tag} 」には ${totalCount}件 の記事があります。`}
+      </Heading>
       <List>
-        {edges.map(({ node }) => {
-          const { excerpt, slug } = node
-          const { title, date, tags } = node.frontmatter
-
-          return (
-            <ListItem key={slug} mt="4">
-              <Link to={`/${slug}`}>
-                <Heading as="h3">{title}</Heading>
-              </Link>
-
-              <Text>
-                {date}
-                <span> ● Tag: </span>
-                {tags.map(tag => (
-                  <Link
-                    key={tag.toLowerCase()}
-                    to={`/tags/${tag.toLowerCase()}`}
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </Text>
-
-              <p>{excerpt}</p>
-            </ListItem>
-          )
-        })}
+        {nodes.map(node => (
+          <ArticleItems node={node} key={node.id} />
+        ))}
       </List>
-    </>
+    </ChakraProvider>
   )
 }
 

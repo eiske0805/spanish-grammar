@@ -25,13 +25,6 @@ export const Layout = ({ children }) => {
         <Box as="main" mt={{ base: 5, sm: 7, md: 9 }}>
           {children}
         </Box>
-        <Box
-          as="footer"
-          fontSize={{ base: "sm", sm: "md", md: "xl" }}
-          mt={{ base: 10, sm: 28, md: 36 }}
-        >
-          {`copyright ${year} ${siteTitle}`}{" "}
-        </Box>
       </Container>
     </>
   )
