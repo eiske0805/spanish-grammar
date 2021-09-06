@@ -6,8 +6,21 @@ const articleTheme = extendTheme({
   styles: {
     global: {
       body: {
-        backgroundColor: "cYellow",
+        backgroundColor: "cWhite",
         color: "cBlue",
+        lineHeight: "taller",
+        letterSpacing: "widest",
+        h2: {
+          mt: 28,
+          fontSize: { base: "lg", sm: "md", md: "xl" },
+          fontWeight: "bold",
+        },
+        h3: {
+          mt: 4,
+        },
+        p: {
+          mt: 4,
+        },
       },
     },
   },

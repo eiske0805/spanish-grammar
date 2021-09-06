@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `スペイン語のwebサイト`,
-    description: `このwebサイトは、スペイン在住の筆者によるスペイン語学習忘備録です。自分のノート代わりに、学んだことをここに書き留めてます。書かれてる内容は、主に「 DELE B2 」くらいのレベルです。`,
+    description: `このwebサイトは、スペイン在住の筆者によるスペイン語学習備忘録です。自分のノート代わりに、学んだことを書き留めています。書かれてる内容は、主に「 DELE B2 」くらいのレベルです。`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
@@ -27,13 +27,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `spanish-grammar`,
+        short_name: `spanish-grammar`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#89A7B7`,
+        theme_color: `#89A7B7`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/spanish-grammar-icon.svg`, // This path is relative to the root of the site.
       },
     },
     {

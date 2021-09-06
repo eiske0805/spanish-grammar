@@ -33,7 +33,7 @@ const About = ({ siteDescription }) => {
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent color="cBlue" bg="cWhite">
+        <ModalContent color="cBlue3" bg="cYellow2">
           <ModalHeader>このWebサイトについて</ModalHeader>
           <ModalCloseButton _focus={{ outline: "none" }} />
           <ModalBody>

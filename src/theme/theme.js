@@ -21,6 +21,8 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
+        lineHeight: "taller",
+        letterSpacing: "wide",
         backgroundColor: "cBlue2",
         color: "cBeige",
       },

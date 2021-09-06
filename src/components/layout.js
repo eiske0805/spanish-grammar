@@ -17,10 +17,9 @@ export const Layout = ({ children }) => {
   `)
   const siteTitle = data.site.siteMetadata.title
   const siteDescription = data.site.siteMetadata.description
-  const year = new Date().getFullYear()
   return (
     <>
-      <Container maxW="container.xl" py="4">
+      <Container maxW="container.lg" py="4">
         <Header siteTitle={siteTitle} siteDescription={siteDescription} />
         <Box as="main" mt={{ base: 5, sm: 7, md: 9 }}>
           {children}
