@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { List } from "@chakra-ui/react"
+import { Grid, List } from "@chakra-ui/react"
 
 import Seo from "../components/Seo"
 import ArticleItems from "../components/articleItems"
@@ -29,11 +29,15 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Seo title="トップページ" />
-      <List mt={{ base: 12, sm: 16, md: 20 }}>
+      <Grid
+        mt={{ base: 12, sm: 16, md: 20 }}
+        templateColumns="repeat(6, 1fr)"
+        gap="6"
+      >
         {data.allMdx.nodes.map(node => (
           <ArticleItems node={node} key={node.id} />
         ))}
-      </List>
+      </Grid>
     </>
   )
 }
