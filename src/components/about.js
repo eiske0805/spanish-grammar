@@ -23,6 +23,8 @@ const About = ({ siteDescription }) => {
         onClick={onOpen}
         variant="outline"
         _focus={{ outline: "none" }}
+        transition=".3s"
+        _hover={{ color: "cBlack" }}
         size={{ base: "sm", sm: "md", md: "xl" }}
         fontSize={{ base: "sm", sm: "md", md: "xl" }}
         borderColor="cBridge"
@@ -33,7 +35,7 @@ const About = ({ siteDescription }) => {
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent color="cBlue3" bg="cYellow2">
+        <ModalContent color="cBeige" bg="cPurple">
           <ModalHeader>このWebサイトについて</ModalHeader>
           <ModalCloseButton _focus={{ outline: "none" }} />
           <ModalBody>
@@ -41,14 +43,14 @@ const About = ({ siteDescription }) => {
             <Text mt="4">
               ※DELE（Diplomas de Español como Lengua
               Extranjera）は、スペイン政府公認のスペイン語能力試験です。レベルは易しい順で「
-              A1, A2, B1, B2, C1, C2 」と６つに分かれています。
+              A1, A2, B1, B2, C1, C2 」の６つに分かれています。
             </Text>
           </ModalBody>
           <ModalFooter>
             <ModalFooter p="0">
               <PrimaryButton
-                bg="cBlue"
-                color="cWhite"
+                bg="cBeige"
+                color="cPurple"
                 size="sm"
                 onClick={onClose}
               >

@@ -1,8 +1,8 @@
 ---
 title: "Condicional（直接法過去未来）"
 date: "2021-09-06"
-hero_image: "./condicional.png"
-hero_image_alt: "Me gustaría ir a la playa"
+hero_image: "./chica.png"
+hero_image_alt: "勉強してる女の子"
 tags: ["condicional（直接法過去未来）"]
 ---
 
@@ -15,6 +15,7 @@ import {
   Grid,
   GridItem,
   Divider,
+  Image,
 } from "@chakra-ui/react"
 
 export const examples = {
@@ -30,30 +31,45 @@ export const examples = {
   ],
   exes2: [
     "Si fueras más amable, tendrías más amigos.",
-    "もし君がもっと優しいなら、もっと友達がいるだろう。",
+    "もし君がもっとやさしいなら、もっと友達がいるだろう。",
     "Mira qué moto más chula. Si tuviera dinero, ahora mismo me la compraría.",
-    "あのバイク見て、すごくかっこいい！！もしお金があれば、いますぐ買うのにな。",
+    "あのバイク見て、すごくかっこいい！！もしお金があれば、今すぐ買うのにな。",
     "Si Andrea aprobara todas las asignaturas, podríamos irnos tranquilos a la playa.",
-    "もしアンドレアが全ての教科に合格したら、私たちは穏やかにビーチに行けるのにな。",
+    "もしアンドレアが全ての科目に合格したら、私たちは落ちついた気持ちでビーチに行けるのにな。",
   ],
   exes3: [
-    "A. Estoy constipado, me siento fatal. （風邪ひいて、具合が悪いんだ。）",
-    "B. Yo que tú iría al médico. （私なら医者に行くよ。）",
-    "A. Tengo que hacer un viaje largo pero no sé si el coche está en condiciones. （長距離旅行に行かなきゃならないんだけど、車が良い状態にあるか分からないんだ。）",
-    "B. Deberías llevarlo al taller. （整備工場に持っていった方がいいよ。）",
-    "A. Me gusta el chico nuevo, es muy guapo. （あの新入生いいね、とてもかっこいい。）",
-    "B. Pues yo en tu lugar le pediría su LINE. （私なら、彼に LINE を聞いちゃうけどな。）",
-    "A. ¿Qué harías en mi lugar? （君ならどうする？）",
-    "B. Yo que tú lo compraría ahora. （私なら今それを買うよ。）",
+    "A. Estoy constipado, me siento fatal.",
+    "風邪ひいて、具合最悪。",
+    "B. Yo que tú iría al médico.",
+    "私なら医者に行くよ。",
+    "A. Tengo que hacer un viaje largo pero no sé si el coche está en condiciones.",
+    "長距離旅行しなきゃならないんだけど、車が良い状態にある分からないんだ。",
+    "B. Deberías llevarlo al taller.",
+    "整備工場に持っていった方がいいよ。",
+    "A. Me gusta el chico nuevo, es muy guapo.",
+    "あの新入生いいね、とてもかっこいい。",
+    "B. Pues yo en tu lugar le pediría su LINE.",
+    "私なら、彼に LINE を聞いちゃうけどな。",
+    "A. ¿Qué harías en mi lugar?",
+    "君ならどうする？",
+    "B. Yo que tú lo compraría ahora.",
+    "私なら今それを買うよ。",
   ],
   advices: [
-    "yo que tú （私が君なら）",
-    "yo en tu lugar （私が君の立場なら）",
-    "si yo fuera tú （もし私が君なら）",
-    "sería mejor ~ （〜した方がいいんじゃないかな）",
-    "sería conveniente ~ （〜した方がいいんじゃないかな）",
-    "deberías ~ （〜するべきなんじゃないかな）",
-    "tendrías que ~ （〜するべきなんじゃないかな）",
+    "yo que tú + condicional節.",
+    "私が君なら、〜だろう",
+    "yo en tu lugar + condicional節.",
+    "私が君の立場なら、〜だろう",
+    "si yo fuera tú + condicional節.",
+    "もし私が君なら、〜だろう。",
+    "sería mejor ~ ",
+    "〜した方がいいんじゃないかな。",
+    "sería conveniente ~ ",
+    "〜した方がいいんじゃないかな。",
+    "deberías ~ ",
+    "〜するべきなんじゃないかな。",
+    "tendrías que ~ ",
+    "〜するべきなんじゃないかな。",
   ],
   exes4: [
     "¿Podría decirme dónde está la sección de ropa de mujer?",
@@ -82,11 +98,16 @@ export const examples = {
     "ラモンは私に言った、土曜日に戻ると。",
   ],
   exes7: [
-    "A. Anoche llamé a Natalia y no me cogió el teléfono. （昨夜、ナタリアに電話したけど、出なかったんだ。）",
-    "B. Estaría durmiendo porque estaba resfriada. （寝ていたんだろう、風邪ひいてたから。）",
-    "A. Esta mañana Diego estaba agotado. （午前中、ディエゴは疲れきってたね。）",
-    "B. Se acostaría tarde anoche. （昨夜遅くに寝たんだろう。）",
-    "Lo sabría ella porque me hubiera dicho algo. （彼女はそれを知っていたと思う、なぜなら、私にそれに関することを言っていたから。）",
+    "A. Anoche llamé a Natalia y no me cogió el teléfono.",
+    "昨夜、ナタリアに電話したけど、出なかったんだ。",
+    "B. Estaría durmiendo porque estaba resfriada.",
+    "寝ていたんだろう、風邪ひいてたから。",
+    "A. Esta mañana Diego estaba agotado.",
+    "午前中、ディエゴは疲れきってたね。",
+    "B. Se acostaría tarde anoche.",
+    "昨夜遅くに寝たんだろう。",
+    "Lo sabría ella porque me hubiera dicho algo.",
+    "彼女はそれを知っていたと思う、なぜなら、私にそれに関することを言っていたから。",
   ],
 }
 
@@ -95,7 +116,7 @@ export const examples = {
 <Table variant="striped" colorScheme="blackAlpha" mt="3">
   <Tbody>
     <Tr>
-      <Td>１　現状とは異なること</Td>
+      <Td>１　現状と異なること</Td>
     </Tr>
     <Tr>
       <Td>Yo viviría en el extranjero, pero no puedo.</Td>
@@ -119,7 +140,7 @@ export const examples = {
       <Td>¿Te importaría llevarme a casa en tu coche?</Td>
     </Tr>
     <Tr>
-      <Td>５　本当は違うと思ってることを言う場合</Td>
+      <Td>５　本当は違うと思っていること</Td>
     </Tr>
     <Tr>
       <Td>Según Pedro, Isabel tendría tres hijos.</Td>
@@ -280,9 +301,9 @@ export const examples = {
   ※futuro（未来形）も、上記 12 個の動詞がイレギュラーな活用をする。
 </Box>
 
-## 用法１、現状とは異なることを述べる場合
+## 用法１、現状と異なることを述べる場合
 
-現在の状況と異なることを述べる。特に deseo（望み、欲求）を表す時に使われる。
+現在の状況と異なることを述べる時に condicional を用いる。特に deseo（望み、欲求）を表す時。
 
 例文
 
@@ -306,30 +327,52 @@ export const examples = {
   gap={1}
   mt="3"
 >
-  <GridItem rowSpan={1} colSpan={1} color="cBeige"   align="center" bg="cBlue2">
+  <GridItem rowSpan={1} colSpan={1} color="cBeige" align="center" bg="cBlue2">
     [条件節]
   </GridItem>
-  <GridItem rowSpan={1} colSpan={1}  color="cGray" align="center"  bg="cBlue2">
+  <GridItem rowSpan={1} colSpan={1} color="cGray" align="center" bg="cBlue2">
     [帰結節]
   </GridItem>
-  <GridItem rowSpan={1} colSpan={1}  color="cBeige" px="1" bg="cBlue2">
+  <GridItem
+    rowSpan={1}
+    colSpan={1}
+    color="cBeige"
+    px="1"
+    bg="cBlue2"
+    align="center"
+  >
     仮定を述べる
   </GridItem>
-  <GridItem rowSpan={1} colSpan={1}  color="cGray" px="1"  bg="cBlue2">
+  <GridItem
+    rowSpan={1}
+    colSpan={1}
+    color="cGray"
+    px="1"
+    bg="cBlue2"
+    align="center"
+  >
     結論を述べる
   </GridItem>
-  <GridItem rowSpan={2} colSpan={1}  color="cBeige" px="1" fontSize={{ base: "xs", sm: "sm", md: "md" }} bg="cBlue2">
+  <GridItem
+    rowSpan={2}
+    colSpan={1}
+    color="cBeige"
+    px="1"
+    fontSize={{ base: "xs", sm: "sm", md: "md" }}
+    bg="cBlue2"
+  >
     Si + imperfecto de subjuntivo
   </GridItem>
   <GridItem rowSpan={2} colSpan={1} color="cGray" px="1" bg="cBlue2">
     condicional
   </GridItem>
-
-  <GridItem rowSpan={2} colSpan={2} color="cBeige" px="1" bg="cBlue2" >
-    ・Si yo fuera rico,<span style={{ color: "#737363" }}> siempre muy feliz.</span>
+  <GridItem rowSpan={2} colSpan={2} color="cBeige" px="1" bg="cBlue2">
+    Si yo fuera rico,
+    <span style={{ color: "#737363" }}> siempre muy feliz.</span>
   </GridItem>
   <GridItem rowSpan={2} colSpan={2} color="cBeige" px="1" bg="cBlue2">
-    もし私が金持ちならば、<span style={{ color: "#737363" }}>すっと幸せに暮らせるだろう。</span>
+    もし私が金持ちならば、
+    <span style={{ color: "#737363" }}>すっと幸せに暮らせるだろう。</span>
   </GridItem>
 </Grid>
 
@@ -347,11 +390,11 @@ export const examples = {
 
 ## 用法 3、consejo（助言）
 
-consejo（助言）でも condicional を用いる。
+consejo（助言）をする時、 condicional を用いる。「用法 2、条件文の帰結節」の一部と考えることもできる。
 
 例文
 
-<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="10">
   <Tbody>
     {examples.exes3.map(ex => (
       <Tr key={ex}>
@@ -363,20 +406,23 @@ consejo（助言）でも condicional を用いる。
 
 助言でよく使われる表現
 
-<Box mb="8" bg="cBlue" mt="1">
-  {examples.advices.map(ad => (
-    <Box key={ad}>
-      <Box px="1" py="0.5" color="cYellow2">
-        {ad}
-      </Box>
-      <Divider />
-    </Box>
+<Grid
+  templateRows="repeat(7, 1fr)"
+  templateColumns="repeat(2, 1fr)"
+  gap={1}
+  color="cYellow2"
+  mt="1"
+>
+  {examples.advices.map((ad, index) => (
+    <GridItem key={index} rowSpan={1} colSpan={1} bg="cBlue" p="1">
+      {ad}
+    </GridItem>
   ))}
-</Box>
+</Grid>
 
 ## 用法 4、丁寧、控えめ、婉曲
 
-丁寧、控えめ、婉曲にお願い、提案、意見を言う時にも condiconal を用いる。
+丁寧・控えめ・婉曲に、お願い・提案・意見を言う時、 condiconal を用いる。
 
 例文
 
@@ -392,7 +438,7 @@ consejo（助言）でも condicional を用いる。
 
 ## 用法 5、本当は違うと思ってることを言う場合
 
-本当はそうじゃないと思っていることを述べる時にも condiconal を用いる。
+本当はそうじゃないと思っていることを述べる時に condiconal を用いる。
 
 例文
 
@@ -408,7 +454,7 @@ consejo（助言）でも condicional を用いる。
 
 ## 用法 6、過去における未来
 
-過去の一時点から見た、未来の出来事を述べる時にも condiconal を用いる。
+過去の一時点から見た、未来の出来事を述べる時に condiconal を用いる。
 
 例文
 
@@ -424,7 +470,9 @@ consejo（助言）でも condicional を用いる。
 
 ## 用法 7、過去の出来事を推測
 
-過去の出来事の推測（hipótesis）する時にも condiconal を用いる。なお、正確には、preterito imperfecto と preterito indefinido における出来事の推測。
+過去の出来事を推測（hipótesis）する時に condiconal を用いる。
+
+なお、正確には、preterito imperfecto（直接法点過去） と preterito indefinido（直接法線過去） における出来事の推測。
 
 例文
 

@@ -1,0 +1,360 @@
+---
+title: "Los verbos de cambio（〜になる）"
+date: "2021-09-07"
+hero_image: "./sapo-hero.png"
+hero_image_alt: "カエルのイラスト"
+tags: ["vocabulario（語彙）"]
+---
+
+import {
+  Table,
+  Tbody,
+  Tr,
+  Td,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Center,
+} from "@chakra-ui/react"
+
+export const examples = {
+  exes1: [
+    "Si sales con Andrea, me quedo tranquila.",
+    "もしあなたがアンドレアと付き合うのなら、私は平静でいられるわ。",
+    "Me quedé impresionada con el dibujo de Ramón.",
+    "私はラモンの絵を見て、感銘をうけた。",
+  ],
+  exes2: [
+    "El agua se convirtió en vino.",
+    "水がワインになった。",
+    "La rana se convirtió en un principe.",
+    "カエルが王子になった。",
+  ],
+  exes3: [
+    "Todos sus deseos se convirtieron en realidad.",
+    "彼の望み全てが現実となった。",
+    "El pequeño pueblo se ha convertido en el destino preferido este verano.",
+    "その小さな村は、この夏の人気スポットとなった。",
+    "España se ha convertido otra vez en el epicentro europeo de la pandemia.",
+    "スペインは再び、ヨーロッパ内でのパンデミックの震源地となった。",
+    "Dormir bien se ha convertido en algo importante para mí.",
+    "よく寝ることは、私にとって重要なこととなった。",
+    "¿Por qué España se ha convertido en el país europeo con más casos por Covid-19?",
+    "どうしてスペインは、ヨーロッパでコロナの発生件数が一番多い国になったの？",
+  ],
+}
+
+## 「〜になる」を意味する 5 つの動詞
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3">
+  <Tbody>
+    <Tr>
+      <Td>hacerse</Td>
+      <Td>職業、イデオロギー、宗教、金</Td>
+    </Tr>
+    <Tr>
+      <Td>ponerse</Td>
+      <Td>心と身体の一時的な変化</Td>
+    </Tr>
+    <Tr>
+      <Td>volverse</Td>
+      <Td>性格、人柄、個性</Td>
+    </Tr>
+    <Tr>
+      <Td>quedarse</Td>
+      <Td>
+        ①喪失後の状態　
+        <br />
+        ②リアクション
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>convertirse en</Td>
+      <Td>
+        ①姿かたちの極端な変化
+        <br />
+        ②普通の変化
+      </Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## hacerse
+
+「職業」、「イデオロギー」、「宗教」、「金」に関する変化と覚えてしまう。
+
+<Grid
+  templateRows="repeat(8, 1fr)"
+  templateColumns="repeat(5, 1fr)"
+  gap={1}
+  color="cBeige"
+>
+  <Center as={GridItem} rowSpan={8} colSpan={2} bg="cBlue2">
+    Se hizo
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    abogado.
+  </GridItem>
+  <Center as={GridItem} rowSpan={2} colSpan={1} px="1" bg="cBlue2">
+    職業
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    camarero.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    católico.
+  </GridItem>
+  <Center as={GridItem} rowSpan={2} colSpan={1} px="1" bg="cBlue2">
+    宗教
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    budista.
+  </GridItem>{" "}
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    millonario.
+  </GridItem>
+  <Center as={GridItem} rowSpan={2} colSpan={1} px="1" bg="cBlue2">
+    金
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    rico.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    comunista.
+  </GridItem>
+  <Center as={GridItem} rowSpan={2} colSpan={1} px="1" bg="cBlue2">
+    イデオロギー
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    liberal.
+  </GridItem>
+</Grid>
+
+## ponerse
+
+心と体の一時的な変化。健康面での変化にも使う。
+
+<Grid
+  templateRows="repeat(4, 1fr)"
+  templateColumns="repeat(5, 1fr)"
+  gap={1}
+  color="cGray"
+>
+  <Center as={GridItem} rowSpan={4} colSpan={2} bg="cGray2">
+    Se puso
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray2" px="2">
+    nervioso.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cGray2">
+    ナーバス
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray2" px="2">
+    moreno.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cGray2">
+    日焼け
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray2" px="2">
+    enfermo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cGray2">
+    病気
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray2" px="2">
+    rojo cuando le dije guapa.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cGray2">
+    頬を赤く
+  </Center>
+</Grid>
+
+## volverse
+
+personalidad（人としての個性、性格、人柄）の変化。
+
+<Grid
+  templateRows="repeat(5, 1fr)"
+  templateColumns="repeat(5, 1fr)"
+  gap={1}
+  color="cYellow2"
+>
+  <Center as={GridItem} rowSpan={5} colSpan={2} bg="cRed">
+    Se volvió
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cRed" px="2">
+    tacaño.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cRed">
+    ケチ
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cRed" px="2">
+    violent.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cRed">
+    暴力的
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cRed" px="2">
+    amable.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cRed">
+    やさしい
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cRed" px="2">
+    antipático.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cRed">
+    感じ悪い
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cRed" px="2">
+    insoportable.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} px="1" bg="cRed">
+    忍耐のない
+  </Center>
+</Grid>
+
+## quedarse
+
+### その１
+
+何かを喪失（perdida）することによって生じる変化を表す。
+
+<Grid
+  templateRows="repeat(6, 1fr)"
+  templateColumns="repeat(7, 1fr)"
+  gap={1}
+  color="cYellow2"
+  mb="10"
+>
+  <Center as={GridItem} rowSpan={6} colSpan={3} bg="cGray">
+    Se quedó
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    cojo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    足が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    ciego.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    目が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    sordo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    耳が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    mudo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    口が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    viudo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    未亡人
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    paro.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    失業
+  </Center>
+</Grid>
+
+### その 2
+
+何かのアクションに対するリアクションとしての変化を表す。
+
+<Grid
+  templateRows="repeat(6, 1fr)"
+  templateColumns="repeat(7, 1fr)"
+  gap={1}
+  color="cYellow2"
+>
+  <Center as={GridItem} rowSpan={6} colSpan={3} bg="cGray">
+    Se quedó
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    satisfecho.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    満足
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    contento.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    満足
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    tranquilo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    落ち着き
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    atónito.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    びっくり仰天
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    en blanco.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    頭真っ白
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cGray" px="2">
+    embarazada.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cGray">
+    妊娠
+  </Center>
+</Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## convertirse en
+
+### その１、姿かたちの極端な変化を表す。
+
+<Table variant="striped" colorScheme="yellow" mt="3" mb="12">
+  <Tbody>
+    {examples.exes2.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+### その２、普通の変化にも使われる。
+
+<Table variant="striped" colorScheme="yellow" mt="3" mb="8">
+  <Tbody>
+    {examples.exes3.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>

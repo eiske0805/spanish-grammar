@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Grid, List } from "@chakra-ui/react"
+import { Grid } from "@chakra-ui/react"
 
 import Seo from "../components/Seo"
 import ArticleItems from "../components/articleItems"

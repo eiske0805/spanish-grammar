@@ -24,6 +24,8 @@ const Menu = () => {
         aria-label="メニューボタン"
         onClick={onOpen}
         variant="outline"
+        transition=".3s"
+        _hover={{ color: "cBlack" }}
         _focus={{ outline: "none" }}
         size={{ base: "sm", sm: "md", md: "xl" }}
         fontSize={{ base: "sm", sm: "md", md: "xl" }}

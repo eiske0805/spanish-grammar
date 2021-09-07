@@ -8,8 +8,6 @@ const articleTheme = extendTheme({
       body: {
         backgroundColor: "cWhite",
         color: "cBlue",
-        lineHeight: "taller",
-        letterSpacing: "widest",
         h2: {
           mt: 28,
           fontSize: { base: "lg", sm: "md", md: "xl" },
@@ -20,6 +18,16 @@ const articleTheme = extendTheme({
         },
         p: {
           mt: 4,
+          fontSize: { base: "sm", sm: "md" },
+        },
+        div: {
+          fontSize: { base: "sm", sm: "md" },
+        },
+        th: {
+          fontSize: { base: "sm", sm: "md" },
+        },
+        td: {
+          fontSize: { base: "sm", sm: "md" },
         },
       },
     },

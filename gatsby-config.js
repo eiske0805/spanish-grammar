@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `スペイン語のwebサイト`,
-    description: `このwebサイトは、スペイン在住の筆者によるスペイン語学習備忘録です。自分のノート代わりに、学んだことを書き留めています。書かれてる内容は、主に「 DELE B2 」くらいのレベルです。`,
+    description: `このwebサイトは、スペイン在住の筆者が、スペイン語の文法などを書き留めているものです。自分のノート代わりに、学んだことをここに綴っています。書かれている内容は、主に「 DELE B2 」くらいのレベルです。`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },

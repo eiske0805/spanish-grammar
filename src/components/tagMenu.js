@@ -9,15 +9,6 @@ const TagMenu = ({ onClose }) => {
       allMdx(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
-          totalCount
-        }
-        totalCount
-      }
-      site {
-        siteMetadata {
-          title
-          description
-          author
         }
       }
     }
@@ -28,11 +19,9 @@ const TagMenu = ({ onClose }) => {
       <ListItem as="li" mt="2" onClick={onClose}>
         <Link to="/">トップページへ</Link>
       </ListItem>
-      {group.map(({ fieldValue, totalCount }) => (
+      {group.map(({ fieldValue }) => (
         <ListItem as="li" mt="2" key={fieldValue} onClick={onClose}>
-          <Link to={`/tags/${kebabCase(fieldValue)}`}>
-            {`${fieldValue}（${totalCount}件）`}
-          </Link>
+          <Link to={`/tags/${kebabCase(fieldValue)}`}>{fieldValue}</Link>
         </ListItem>
       ))}
     </UnorderedList>

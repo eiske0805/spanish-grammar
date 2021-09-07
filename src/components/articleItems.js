@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Box, Heading, Flex, ListItem, Grid, GridItem } from "@chakra-ui/react"
+import { Box, Heading, Flex, GridItem } from "@chakra-ui/react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ArticleItems = ({ node }) => {
@@ -25,7 +25,7 @@ const ArticleItems = ({ node }) => {
                 imgStyle={{ borderRadius: "5px" }}
               />
             </Box>
-            <Heading as="h2" fontSize="lg" pt="1" px="2">
+            <Heading as="h2" fontSize="lg" p="2">
               {node.frontmatter.title}
             </Heading>
           </Box>
