@@ -20,13 +20,12 @@ const About = ({ siteDescription }) => {
       <Button
         aria-label="インフォメーションボタン"
         onClick={onOpen}
-        variant="outline"
+        variant="unstyled"
         _focus={{ outline: "none" }}
         transition=".3s"
         _hover={{ color: "cBlack" }}
         size={{ base: "sm", sm: "md", md: "xl" }}
         fontSize={{ base: "sm", sm: "md", md: "xl" }}
-        borderColor="cBridge"
         p="1"
       >
         yo

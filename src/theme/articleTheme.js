@@ -30,6 +30,7 @@ const articleTheme = extendTheme({
           fontSize: { base: "sm", sm: "md" },
         },
         button: {
+          borderColor: "cBlue",
           path: {
             fill: "cBlue",
           },

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Heading, Grid, ChakraProvider } from "@chakra-ui/react"
+import { Heading, Grid, ChakraProvider, Box } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
 import ArticleItems from "../components/articleItems"
@@ -46,15 +46,17 @@ const Tags = ({ pageContext, data }) => {
       >
         {`「 ${tag} 」には ${totalCount}件 の記事があります。`}
       </Heading>
-      <Grid
-        mt={{ base: 12, sm: 16, md: 20 }}
-        templateColumns="repeat(6, 1fr)"
-        gap="6"
-      >
-        {nodes.map(node => (
-          <ArticleItems node={node} key={node.id} />
-        ))}
-      </Grid>
+      <Box>
+        <Grid
+          mt={{ base: 12, sm: 16, md: 20 }}
+          templateColumns="repeat(6, 1fr)"
+          gap="6"
+        >
+          {nodes.map(node => (
+            <ArticleItems node={node} key={node.id} />
+          ))}
+        </Grid>
+      </Box>
     </ChakraProvider>
   )
 }

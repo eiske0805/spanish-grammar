@@ -5,11 +5,10 @@ const TwitterButton = ({ twitter }) => {
   return (
     <Button
       aria-label="twitterリンクボタン"
-      variant="outline"
+      variant="unstyled"
       transition=".3s"
-      _hover={{ color: "cBlack" }}
+      _hover={{ borderColor: "cBlack" }}
       size={{ base: "sm", sm: "md", md: "xl" }}
-      borderColor="cBridge"
       p="1"
       ml="3"
       _focus={{ outline: "none" }}
