@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Grid } from "@chakra-ui/react"
 
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 import ArticleItems from "../components/articleItems"
 
 export const pageQuery = graphql`
@@ -29,11 +29,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Seo title="トップページ" />
-      <Grid
-        mt={{ base: 12, sm: 16, md: 20 }}
-        templateColumns="repeat(6, 1fr)"
-        gap="6"
-      >
+      <Grid templateColumns="repeat(6, 1fr)" gap="6">
         {data.allMdx.nodes.map(node => (
           <ArticleItems node={node} key={node.id} />
         ))}

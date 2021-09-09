@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { ChakraProvider, Heading, Text, HStack, Box } from "@chakra-ui/react"
 import kebabCase from "lodash/kebabCase"
 
-import Seo from "../components/Seo"
+import Seo from "../components/seo"
 import TagIcon from "../components/tagIcon"
 import articleTheme from "../theme/articleTheme"
 

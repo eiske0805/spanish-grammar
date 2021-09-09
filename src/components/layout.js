@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
     <Container maxW="container.lg" py="4">
       <Flex direction="column" minH="100vh">
         <Header />
-        <Box as="main" mt={{ base: 5, sm: 7, md: 9 }}>
+        <Box as="main" mt={{ base: 12, sm: 16, md: 20 }}>
           {children}
         </Box>
         <Spacer />
