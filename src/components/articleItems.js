@@ -5,16 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const ArticleItems = ({ node }) => {
   return (
-    <GridItem
-      colSpan={{ base: 6, sm: 3, lg: 2 }}
-      mb="6"
-      borderRadius="5px"
-      _hover={{
-        boxShadow: "2xl",
-        transform: "translateY(-3px)",
-      }}
-      transition=".3s"
-    >
+    <GridItem colSpan={{ base: 6, sm: 3, lg: 2 }} mb="6" transition=".3s">
       <Link to={`/${node.slug}`}>
         <Flex>
           <Box>

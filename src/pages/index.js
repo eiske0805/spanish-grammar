@@ -1,11 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Grid, ChakraProvider } from "@chakra-ui/react"
+import { Grid } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
 import ArticleItems from "../components/articleItems"
 import Layout from "../components/layout"
-import theme from "../theme/theme"
 
 export const pageQuery = graphql`
   query {
@@ -29,16 +28,14 @@ export const pageQuery = graphql`
 
 const IndexPage = ({ data }) => {
   return (
-    <ChakraProvider theme={theme}>
-      <Layout>
-        <Seo title="トップページ" />
-        <Grid templateColumns="repeat(6, 1fr)" gap="6">
-          {data.allMdx.nodes.map(node => (
-            <ArticleItems node={node} key={node.id} />
-          ))}
-        </Grid>
-      </Layout>
-    </ChakraProvider>
+    <Layout>
+      <Seo title="トップページ" />
+      <Grid templateColumns="repeat(6, 1fr)" gap="6">
+        {data.allMdx.nodes.map(node => (
+          <ArticleItems node={node} key={node.id} />
+        ))}
+      </Grid>
+    </Layout>
   )
 }
 

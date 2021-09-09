@@ -16,7 +16,7 @@ const Header = () => {
   `)
   const siteTitle = data.site.siteMetadata.title
   return (
-    <Box as="header" pt={{ base: 4, sm: 8, md: 12 }}>
+    <Box as="header" pt={{ base: 4, sm: 8, md: 12 }} borderBottom="1px">
       <Heading as="h1" fontSize={{ base: "lg", sm: "xl", md: "2xl" }}>
         <Link to="/">{siteTitle} </Link>
       </Heading>

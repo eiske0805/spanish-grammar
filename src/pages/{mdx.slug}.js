@@ -6,6 +6,7 @@ import kebabCase from "lodash/kebabCase"
 
 import Seo from "../components/seo"
 import TagIcon from "../components/tagIcon"
+import Layout from "../components/layout"
 import articleTheme from "../theme/articleTheme"
 
 const articleTemplate = ({ data }) => {
@@ -14,28 +15,30 @@ const articleTemplate = ({ data }) => {
   const tags = data.mdx.frontmatter.tags
   return (
     <ChakraProvider theme={articleTheme}>
-      <Seo title={pageTitle} />
-      <Text
-        align="right"
-        fontSize={{ base: "xs", sm: "sm" }}
-        mt={{ base: 12, sm: 16, md: 20 }}
-      >
-        {date}
-      </Text>
-      <Heading as="h1" fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }} mt="2">
-        {pageTitle}
-      </Heading>
-      <Box my="4">
-        {tags.map(tag => (
-          <HStack key={tag}>
-            <TagIcon width="14px" height="14px" />
-            <Link to={`/tags/${kebabCase(tag)}`}>
-              <Box>{tag}</Box>
-            </Link>
-          </HStack>
-        ))}
-      </Box>
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      <Layout>
+        <Seo title={pageTitle} />
+        <Text
+          align="right"
+          fontSize={{ base: "xs", sm: "sm" }}
+          mt={{ base: 12, sm: 16, md: 20 }}
+        >
+          {date}
+        </Text>
+        <Heading as="h1" fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }} mt="2">
+          {pageTitle}
+        </Heading>
+        <Box my="4">
+          {tags.map(tag => (
+            <HStack key={tag}>
+              <TagIcon width="14px" height="14px" />
+              <Link to={`/tags/${kebabCase(tag)}`}>
+                <Box>{tag}</Box>
+              </Link>
+            </HStack>
+          ))}
+        </Box>
+        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      </Layout>
     </ChakraProvider>
   )
 }
