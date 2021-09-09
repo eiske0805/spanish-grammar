@@ -15,19 +15,156 @@ import {
   Box,
   Grid,
   GridItem,
-  Divider,
   Image,
   Center,
+  Text,
 } from "@chakra-ui/react"
 
 import image from "./pasiva.png"
+
+export const examples = {
+  exes1: [
+    "Un abogado de 30 años fue detenido por la policía.",
+    "30歳の弁護士が逮捕された、警察によって。",
+    "Un estudiante de 18 años ha sido expulsado por el director de un instituto.",
+    "18歳の学生が追放された、校長によって。",
+    "Varios autobuses fueron incendiados por unos alborotadores.",
+    "いくつかのバスが燃やされた、暴徒たちによって。",
+  ],
+  exes2: [
+    "Se venden pocos pisos ahora.",
+    "現在、ほとんどピスは売られていない。",
+    "Se comparan los billetes en la taquilla.",
+    "チケットは買われる、窓口で。",
+    "Antes, se no pagaban impuestos.",
+    "以前、税金は払われなかった。",
+    "Es posible que las elecciones se celebren este verano.",
+    "この夏に選挙が開催されることは、ありうる。",
+  ],
+}
 
 <Box>
   <Image src={image} alt="judo" />
 </Box>
 
-能動態は「動作をする側」が主語になる文。受動態は「動作をされる側 」が主語になる文。
+## 能動態と受動態
+
+<Grid
+  templateRows="repeat(2, 1fr)"
+  templateColumns="repeat(15, 1fr)"
+  gap={1}
+  color="cBeige"
+  mt="2"
+>
+  <Center as={GridItem} rowSpan={1} colSpan={2} bg="cBlue3">
+    能動態
+  </Center>
+  <GridItem rowSpan={1} colSpan={3} bg="cBlue3" p="1">
+    「〜する」
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={10} bg="cBlue3" p="1">
+    「動作をする側」が主語になる文。
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} bg="cBlue3">
+    受動態
+  </Center>
+  <GridItem rowSpan={1} colSpan={3} bg="cBlue3" p="1">
+    「〜される」
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={10} bg="cBlue3" p="1">
+    「動作をされる側」が主語になる文。
+  </GridItem>
+</Grid>
 
 上の画像だと、投げ飛ばしている子供が「動作をする側」で、投げ飛ばされている大人が「動作をされる側」。
 
-スペイン語の受動態は、２種類ある。以下において、能動態の文を、２種類の受動態の文に書き換えてみる。
+## 2 種類の受動態
+
+スペイン語の受動態は、２種類ある。ここでは、能動態の文を、2 つの受動態に書きかえる。
+
+<Grid
+  templateRows="repeat(11, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  color="cBeige"
+  mt="4"
+>
+  <Center as={GridItem} rowSpan={1} colSpan={1} bg="cGray2">
+    能動態
+  </Center>
+  <GridItem rowSpan={1} colSpan={1} bg="cGray2" p="2">
+    Los romanos construyeron este puente hace 2000 años.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cGray2" p="2">
+    古代ローマ人が造った、この橋を、2000年前に。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cGray2" p="2" color="cBeige">
+    ※能動態は「動作をする側」の「古代ローマ人」が主語となる。
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} bg="cRed">
+    受動態その１
+  </Center>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    Este puente fue construido hace 2000 años por los romanos.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    この橋は造られた、2000年前に、古代ローマ人によって。{" "}
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2" color="cBeige">
+    ※受動態は「動作をされる側」の「橋」が主語となる。
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={1} bg="cBlue2">
+    受動態その2
+  </Center>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    Este puente se construyó hace 2000 años{" "}
+    <Text as="del">por los romanos.</Text>
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    この橋は造られた、2000年前に、<Text as="del">古代ローマ人によって。</Text>
+  </GridItem>
+</Grid>
+
+## 受動態 その１ 「 ser + pariticipio（過去分詞） 」
+
+<Box bg="cGray" color="cBeige" p="3" mt="4" mb="8">
+  「 動作をされる側 + ser pariticipio + por 動作をする側. 」
+</Box>
+
+この「受動態その 1」は、会話では使わない。通常、書き言葉でのみ使う。
+
+<Text mt="10">例文</Text>
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 受動態 その 2 「 se + verbo（動詞） 」
+
+<Box bg="cGray" color="cBeige" p="3" mt="4">
+  「 動作をされる側 + se + verbo + <Text as="del">por 動作をする側.</Text> 」
+</Box>
+
+主語である「動作をされる側」は、「人」は不可。「事物」のみ可能。
+
+por を用いて「動作をする側」を示すことはしない。これは、「動作をする側」が不明であったり、もしくは言及の必要がないから。
+
+この「受動態その２」は、会話でも書き言葉でも普通に使われる。また、 Impersonalidad（非人称）にも分類される。
+
+<Text mt="10">例文</Text>
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes2.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>

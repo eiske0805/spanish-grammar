@@ -19,6 +19,9 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            social {
+              twitter
+            }
           }
         }
       }
@@ -54,11 +57,11 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.social?.twitter || ``,
         },
         {
           name: `twitter:title`,

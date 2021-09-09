@@ -8,6 +8,7 @@ const theme = extendTheme({
     cBlue3: "#647E93",
     cRed: "#E18C7A",
     cRed2: "#FF625A",
+    cRed3: "#FFC6BF",
     cYellow: "#E3DAB0",
     cYellow2: "#EAE5BA",
     cBlack: "#423D38",
@@ -31,6 +32,24 @@ const theme = extendTheme({
           transition: ".3s",
           _hover: {
             color: "cBlack",
+            rect: {
+              fill: "cBlack",
+            },
+          },
+          _focus: {
+            boxShadow: "none",
+            outline: "none",
+          },
+        },
+        button: {
+          path: {
+            transition: ".3s",
+            fill: "cBeige",
+          },
+          _hover: {
+            path: {
+              fill: "cBlack",
+            },
           },
         },
       },

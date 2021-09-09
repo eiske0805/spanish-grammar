@@ -7,14 +7,15 @@ import kebabCase from "lodash/kebabCase"
 import Seo from "../components/Seo"
 import TagIcon from "../components/tagIcon"
 import articleTheme from "../theme/articleTheme"
+import Footer from "../components/footer"
 
 const articleTemplate = ({ data }) => {
-  const title = data.mdx.frontmatter.title
+  const pageTitle = data.mdx.frontmatter.title
   const date = data.mdx.frontmatter.date
   const tags = data.mdx.frontmatter.tags
   return (
     <ChakraProvider theme={articleTheme}>
-      <Seo title={title} />
+      <Seo title={pageTitle} />
       <Text
         align="right"
         fontSize={{ base: "xs", sm: "sm" }}
@@ -23,7 +24,7 @@ const articleTemplate = ({ data }) => {
         {date}
       </Text>
       <Heading as="h1" fontSize={{ base: "xl", sm: "2xl", lg: "3xl" }} mt="2">
-        {title}
+        {pageTitle}
       </Heading>
       <Box my="4">
         {tags.map(tag => (
@@ -36,6 +37,7 @@ const articleTemplate = ({ data }) => {
         ))}
       </Box>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      {/* <Footer />// */}
     </ChakraProvider>
   )
 }
@@ -48,6 +50,11 @@ export const query = graphql`
         title
         date(formatString: "YYYY - MM - DD")
         tags
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

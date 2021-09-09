@@ -1,12 +1,20 @@
 import * as React from "react"
-import { Link } from "gatsby"
-
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { Box, Heading, Flex, Spacer } from "@chakra-ui/react"
 
-import About from "./about"
-import Menu from "./menu"
+import Navi from "./navi"
 
-const Header = ({ siteTitle, siteDescription }) => {
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  const siteTitle = data.site.siteMetadata.title
   return (
     <Box as="header">
       <Heading
@@ -18,8 +26,7 @@ const Header = ({ siteTitle, siteDescription }) => {
       </Heading>
       <Flex as="nav" mt="4">
         <Spacer />
-        <About siteDescription={siteDescription} />
-        <Menu />
+        <Navi />
       </Flex>
     </Box>
   )

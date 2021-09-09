@@ -20,6 +20,7 @@ const PrimaryButton = props => {
       disabled={disabled || loading}
       isLoading={loading}
       onClick={onClick}
+      _focus={{ outline: "none" }}
     >
       {children}
     </Button>

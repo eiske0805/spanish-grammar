@@ -5,10 +5,10 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  DrawerFooter,
   useDisclosure,
   Button,
+  Flex,
+  Spacer,
 } from "@chakra-ui/react"
 
 import PrimaryButton from "./primaryButton"
@@ -43,16 +43,21 @@ const Menu = () => {
       >
         <DrawerOverlay />
         <DrawerContent bg="cRed" color="cWhite">
-          <DrawerCloseButton _focus={{ outline: "none" }} />
           <DrawerHeader>カテゴリー</DrawerHeader>
           <DrawerBody>
             <TagMenu onClose={onClose} />
+            <Flex mt="8">
+              <Spacer />
+              <PrimaryButton
+                bg="cWhite"
+                color="cRed"
+                size="sm"
+                onClick={onClose}
+              >
+                閉じる
+              </PrimaryButton>
+            </Flex>
           </DrawerBody>
-          <DrawerFooter>
-            <PrimaryButton bg="cWhite" color="cRed" size="sm" onClick={onClose}>
-              閉じる
-            </PrimaryButton>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>

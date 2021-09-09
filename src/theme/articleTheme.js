@@ -29,6 +29,11 @@ const articleTheme = extendTheme({
         td: {
           fontSize: { base: "sm", sm: "md" },
         },
+        button: {
+          path: {
+            fill: "cBlue",
+          },
+        },
       },
     },
   },
