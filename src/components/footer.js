@@ -20,7 +20,7 @@ const Footer = () => {
     <Flex as="footer" pt="8" pb="4" mt="20" borderTop="1px">
       <Flex direction="column" justify="space-between">
         <Navi />
-        <Text fontSize="xs">
+        <Text fontSize={{ base: "xs", sm: "sm" }}>
           &copy; {`${new Date().getFullYear()} ${siteTitle}`}
         </Text>
       </Flex>

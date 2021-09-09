@@ -7,7 +7,6 @@ import kebabCase from "lodash/kebabCase"
 import Seo from "../components/Seo"
 import TagIcon from "../components/tagIcon"
 import articleTheme from "../theme/articleTheme"
-import Footer from "../components/footer"
 
 const articleTemplate = ({ data }) => {
   const pageTitle = data.mdx.frontmatter.title
@@ -37,7 +36,6 @@ const articleTemplate = ({ data }) => {
         ))}
       </Box>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      {/* <Footer />// */}
     </ChakraProvider>
   )
 }

@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Button, Box, Link } from "@chakra-ui/react"
 
 const TwitterButton = ({ twitter }) => {
@@ -13,6 +12,7 @@ const TwitterButton = ({ twitter }) => {
       borderColor="cBridge"
       p="1"
       ml="3"
+      _focus={{ outline: "none" }}
     >
       <Link
         href={`https://twitter.com/${twitter}`}

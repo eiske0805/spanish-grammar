@@ -6,7 +6,6 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,
   useDisclosure,
   Button,
   Text,
@@ -37,7 +36,6 @@ const About = ({ siteDescription }) => {
         <ModalOverlay />
         <ModalContent color="cBeige" bg="cPurple">
           <ModalHeader>このWebサイトについて</ModalHeader>
-          <ModalCloseButton _focus={{ outline: "none" }} />
           <ModalBody>
             <Text>{siteDescription}</Text>
             <Text mt="4">

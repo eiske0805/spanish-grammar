@@ -36,7 +36,7 @@ module.exports = {
         background_color: `#89A7B7`,
         theme_color: `#89A7B7`,
         display: `minimal-ui`,
-        icon: `src/images/spanish-grammar-icon.svg`, // This path is relative to the root of the site.
+        icon: `src/images/icon.svg`, // This path is relative to the root of the site.
       },
     },
     {

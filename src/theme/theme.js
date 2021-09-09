@@ -29,7 +29,7 @@ const theme = extendTheme({
         backgroundColor: "cBlue2",
         color: "cBeige",
         a: {
-          transition: ".3s",
+          transition: "0.3s",
           _hover: {
             color: "cBlack",
             rect: {
