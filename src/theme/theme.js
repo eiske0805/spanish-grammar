@@ -36,20 +36,24 @@ const theme = extendTheme({
               fill: "cBlack",
             },
           },
-          _focus: {
-            boxShadow: "none",
-            outline: "none",
+          rect: {
+            transition: ".3s",
           },
         },
         button: {
-          path: {
-            transition: ".3s",
-            fill: "cBeige",
-          },
+          transition: "0.3s",
           _hover: {
+            color: "cBlack",
             path: {
               fill: "cBlack",
             },
+          },
+          _focus: {
+            outline: "none",
+          },
+          path: {
+            transition: ".3s",
+            fill: "cBeige",
           },
         },
       },

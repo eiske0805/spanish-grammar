@@ -24,12 +24,9 @@ const Menu = () => {
         aria-label="メニューボタン"
         onClick={onOpen}
         variant="unstyled"
-        transition=".3s"
-        _hover={{ color: "cBlack" }}
         _focus={{ outline: "none" }}
         size={{ base: "sm", sm: "md", md: "xl" }}
         fontSize={{ base: "sm", sm: "md", md: "xl" }}
-        // borderColor="cBridge"
         p="1"
         ml="3"
       >

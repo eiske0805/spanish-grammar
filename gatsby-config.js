@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `スペイン語のwebサイト`,
-    description: `このwebサイトは、スペイン在住の筆者の、スペイン語学習ノートです。学んだ文法等について、ここに綴っています。書かれている内容は、主に「 DELE B2 」くらいのレベルです。`,
+    description: `このwebサイトは、スペイン在住の筆者のスペイン語学習ノートです。学んだ文法等について綴っています。内容のレベルは、主に「 DELE B2 」くらいです。`,
     author: `spanish-grammar`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://paginadelcastellano.com/`,
     social: {
       twitter: `spanish_website`,
     },
@@ -55,5 +55,17 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          process.env.GOOGLE_ANALYTICS_ID, // Google Analytics / GA
+        ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
   ],
 }

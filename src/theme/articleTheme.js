@@ -36,8 +36,7 @@ const articleTheme = extendTheme({
           },
         },
         rect: {
-          transition: "0.3s",
-          fill: "cYellow",
+          fill: "cBlue",
         },
       },
     },

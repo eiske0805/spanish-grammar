@@ -6,12 +6,9 @@ const TwitterButton = ({ twitter }) => {
     <Button
       aria-label="twitterリンクボタン"
       variant="unstyled"
-      transition=".3s"
-      _hover={{ borderColor: "cBlack" }}
       size={{ base: "sm", sm: "md", md: "xl" }}
       p="1"
       ml="3"
-      _focus={{ outline: "none" }}
     >
       <Link
         href={`https://twitter.com/${twitter}`}

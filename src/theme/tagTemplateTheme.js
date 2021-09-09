@@ -8,17 +8,6 @@ const tagTemplateTheme = extendTheme({
       body: {
         backgroundColor: "cGray",
         color: "cBeige",
-        button: {
-          path: {
-            transition: ".3s",
-            fill: "cBeige",
-          },
-          _hover: {
-            path: {
-              fill: "cBlack",
-            },
-          },
-        },
       },
     },
   },

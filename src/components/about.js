@@ -22,8 +22,6 @@ const About = ({ siteDescription }) => {
         onClick={onOpen}
         variant="unstyled"
         _focus={{ outline: "none" }}
-        transition=".3s"
-        _hover={{ color: "cBlack" }}
         size={{ base: "sm", sm: "md", md: "xl" }}
         fontSize={{ base: "sm", sm: "md", md: "xl" }}
         p="1"
