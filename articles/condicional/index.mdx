@@ -4,8 +4,10 @@ date: "2021-09-06"
 hero_image: "./chica.png"
 hero_image_alt: "勉強してる女の子"
 tags: ["condicional"]
+embeddedImagesLocal: ["./chica.png"]
 ---
 
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   Table,
   Tbody,
@@ -110,6 +112,10 @@ export const examples = {
     "彼女はそれを知っていたと思う、なぜなら、私にそれに関することを言っていたから。",
   ],
 }
+
+<Box>
+  <GatsbyImage alt="勉強してる女の子" image={getImage(props.localImages[0])} />
+</Box>
 
 ## condicional の７つの用法
 

@@ -17,7 +17,9 @@ const TagMenu = ({ onClose }) => {
   return (
     <UnorderedList>
       <ListItem as="li" mt="2" onClick={onClose}>
-        <Link to="/">トップページへ</Link>
+        <Link to="/" _focus={{ outline: "none" }}>
+          トップページへ
+        </Link>
       </ListItem>
       {group.map(({ fieldValue }) => (
         <ListItem as="li" mt="2" key={fieldValue} onClick={onClose}>

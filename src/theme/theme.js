@@ -32,6 +32,9 @@ const theme = extendTheme({
         color: "cBeige",
         a: {
           transition: "0.3s",
+          _focus: {
+            outline: "none",
+          },
           _hover: {
             color: "cBlack",
             rect: {

@@ -4,8 +4,11 @@ date: "2021-09-08"
 hero_image: "./pasiva.png"
 hero_image_alt: "子供と大人が柔道をしている"
 tags: ["la voz pasiva", "impersonalidad"]
+embeddedImagesLocal: ["./pasiva.png"]
 ---
 
+import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   Table,
   Tbody,
@@ -18,8 +21,6 @@ import {
   Center,
   Text,
 } from "@chakra-ui/react"
-
-import image from "./pasiva.png"
 
 export const examples = {
   exes1: [
@@ -43,7 +44,10 @@ export const examples = {
 }
 
 <Box>
-  <Image src={image} alt="judo" />
+  <GatsbyImage
+    alt="子供と大人が柔道をしている"
+    image={getImage(props.localImages[0])}
+  />
 </Box>
 
 ## 能動態と受動態
@@ -154,7 +158,7 @@ export const examples = {
 
 por を用いて「動作をする側」を示すことはしない。これは、「動作をする側」が不明であったり、もしくは言及の必要がないから。
 
-この「受動態その２」は、会話でも書き言葉でも普通に使われる。また、 Impersonalidad（非人称）にも分類される。
+この「受動態その２」は、会話でも書き言葉でも普通に使われる。また、 <Link to="/impersonalidad"><span style={{ color: "#A293C2" }}>Impersonalidad（非人称）</span></Link>にも分類される。
 
 <Text mt="10">例文</Text>
 

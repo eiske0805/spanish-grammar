@@ -54,7 +54,7 @@ module.exports = {
         isUsingColorMode: true,
       },
     },
-    "gatsby-plugin-mdx",
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

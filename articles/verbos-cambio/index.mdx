@@ -4,8 +4,10 @@ date: "2021-09-07"
 hero_image: "./sapo-hero.png"
 hero_image_alt: "カエルのイラスト"
 tags: ["vocabulario"]
+embeddedImagesLocal: ["./sapo-hero.png"]
 ---
 
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   Table,
   Tbody,
@@ -45,6 +47,10 @@ export const examples = {
     "どうしてスペインは、ヨーロッパでコロナの発生件数が一番多い国になったの？",
   ],
 }
+
+<Box>
+  <GatsbyImage alt="カエルのイラスト" image={getImage(props.localImages[0])} />
+</Box>
 
 ## 「〜になる」を意味する 5 つの動詞
 

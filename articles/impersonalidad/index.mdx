@@ -4,9 +4,11 @@ date: "2021-09-10"
 hero_image: "./impersonalidad.png"
 hero_image_alt: "泥棒が財布を盗んでいる"
 tags: ["impersonalidad", "la voz pasiva"]
+embeddedImagesLocal: ["./impersonalidad.png"]
 ---
 
 import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {
   Table,
   Tbody,
@@ -19,8 +21,6 @@ import {
   Center,
   Text,
 } from "@chakra-ui/react"
-
-import imageImpersonalidad from "./impersonalidad.png"
 
 export const examples = {
   exes1: [
@@ -54,7 +54,10 @@ export const examples = {
 }
 
 <Box>
-  <Image src={imageImpersonalidad} alt="泥棒が女性から財布を盗んでいる" />
+  <GatsbyImage
+    alt="泥棒が財布を盗んでいる"
+    image={getImage(props.localImages[0])}
+  />
 </Box>
 
 ## 3 つの Impersonalidad（非人称）
