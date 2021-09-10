@@ -64,7 +64,7 @@ export const examples = {
 
 多くの文には、「動作をする側」と「動作をされる側」がある。上の画像だと、財布を盗んでいる泥棒が「動作をする側」で、財布を盗まれている女性が「動作をされる側」。
 
-Impersonalidad は、「動作をする側」を具体的に言及しない文のかたち。「動作をする側」の種類によって、以下の３つに分類される。
+Impersonalidad は、「動作をする側」を具体的に言及しない表現方法。「動作をする側」の種類によって、以下の３つに分類される。
 
 <Grid
   templateRows="repeat(4, 1fr)"
@@ -76,19 +76,19 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
     「動作をする側」が...
   </Center>
   <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
-    1 人・人々　=se
+    1 一般的・総称的な、「 人・人々　=se 」を表す場合
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
     能動態
   </GridItem>
   <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
-    2 誰か =ellos, algunos
+    2 不特定な「 誰か =ellos, algunos 」を表す場合
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
     能動態
   </GridItem>
   <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
-    3 言及に値しない
+    3 不明、もしくは言及に値しない場合
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
     受動態
@@ -103,23 +103,24 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
   を参照。
 </Text>
 
-## 1 「動作をする側」が「人・人々」を表す場合
+## 1 「動作をする側」が、一般的・総称的な、「 人・人々　=se 」を表す場合
 
 <Grid
   templateRows="repeat(4, 1fr)"
   templateColumns="repeat(1, 1fr)"
   gap={1}
   mt="4"
+  color="cBeige"
 >
-  <GridItem rowSpan={1} colSpan={1} bg="cRed3" p="2">
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
     Allí, se respetaba mucho los ancianos.
   </GridItem>
-  <GridItem rowSpan={1} colSpan={1} bg="cRed3" p="2">
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
     あの当時、人々はとてもリスペクトしていた、お年寄りを。
   </GridItem>
-  <GridItem rowSpan={2} colSpan={1} bg="cRed3" p="2">
-    se が「人・人々」を意味する。=la gente
-    と考える。主語であり、3人称単数形なので、動詞は3人称単数形に活用する。
+  <GridItem rowSpan={2} colSpan={1} bg="cBlue2" p="2">
+    se が「人・人々」を意味する。se =la gente と考える。se
+    は、主語であり、3人称単数形なので、動詞は3人称単数形に活用する。
   </GridItem>
 </Grid>
 
@@ -135,10 +136,12 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
   </Tbody>
 </Table>
 
-※reflexivo（再帰動詞）を用いる場合は、se が主語を表すのか reflexivo
-を表すのか混同するので、主語に「la gente」や「uno」を補う。
+<span style={{ color: "#E18C7A" }}>
+  ※reflexivo（再帰動詞）を用いる場合は、se が主語を表すのか reflexivo
+  を表すのか混同するので、主語に「la gente」や「uno」を補う。
+</span>
 
-## 2 「動作をする側」が「誰か」を表す場合（ =誰か不明な場合）
+## 2 「動作をする側」が、不特定な「 誰か =ellos, algunos 」を表す場合
 
 <Grid
   templateRows="repeat(5, 1fr)"
@@ -151,11 +154,17 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cGreen2" p="2">
     （誰かが）私から財布を盗んだ。　→　私は財布を盗まれた。
+    <span style={{ color: "#E18C7A" }}>
+      ※この用法は、日本語だと受動態で表現するのが自然。
+    </span>
   </GridItem>
   <GridItem rowSpan={3} colSpan={1} bg="cGreen2" p="2">
-    algunos/ellos が「誰か」を意味する。通常、algunos/ellos
+    algunos/ellos が不特定な「誰か」を意味する。通常、algunos/ellos
     は省略される。algunos/ellos（3人称複数）
     が主語なので、動詞は3人称複数形に活用する。
+    <span style={{ color: "#E18C7A" }}>
+      ※日本語に訳すと「誰か」と単数形だが、スペイン語では複数形となる点に注意。
+    </span>
   </GridItem>
 </Grid>
 
@@ -171,7 +180,7 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
   </Tbody>
 </Table>
 
-## 3 「動作をする側」が言及に値しない場合
+## 3 「動作をする側」が、不明、もしくは言及に値しない場合
 
 <Grid
   templateRows="repeat(5, 1fr)"
@@ -188,7 +197,7 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
   </GridItem>
 
   <GridItem rowSpan={3} colSpan={1} bg="cYellow" p="2">
-    「動作をする側」が、言及するに値しない、もしくは不明なので省略される。「動作をされる側」が主語となる受動態の文。「
+    「動作をする側」が、不明、もしくは言及に値しないので省略される。「動作をされる側」が主語となる受動態の文。「
     動作をされる側 + se + verbo + <Text as="del">por 動作をする側.</Text>{" "}
     」の形で表される。詳細は、
     <Link to="/pasiva">
@@ -209,3 +218,6 @@ Impersonalidad は、「動作をする側」を具体的に言及しない文�
     ))}
   </Tbody>
 </Table>
+<span style={{ color: "#E18C7A" }}>
+  ※３つの例文全て、動詞が主語の前にある。スペイン語は、主語と動詞の順番をあまり気にしない言語らしい。
+</span>
