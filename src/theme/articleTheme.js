@@ -19,9 +19,11 @@ const articleTheme = extendTheme({
         p: {
           mt: 4,
           fontSize: { base: "sm", sm: "md" },
+          lineHeight: "taller",
         },
         div: {
           fontSize: { base: "sm", sm: "md" },
+          lineHeight: "taller",
         },
         th: {
           fontSize: { base: "sm", sm: "md" },

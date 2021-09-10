@@ -16,6 +16,8 @@ const theme = extendTheme({
     cGray2: "#BBB2B2",
     cPurple: "#A293C2",
     cBeige: "#FFE9BC",
+    cGreen: "#9BAC8D",
+    cGreen2: "#BBCBAF",
   },
   fonts: {
     heading: "Chelsea Market, Noto Sans JP, sans-serif",

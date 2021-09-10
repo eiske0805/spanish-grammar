@@ -46,7 +46,7 @@ const Tags = ({ pageContext, data }) => {
           fontSize={{ base: "lg", md: "xl" }}
           my={{ base: 12, sm: 16, md: 20 }}
         >
-          {`「 ${tag} 」には ${totalCount}件 の記事があります。`}
+          {`「 ${tag} 」に関する記事は ${totalCount} 件 あります。`}
         </Heading>
         <Box>
           <Grid
