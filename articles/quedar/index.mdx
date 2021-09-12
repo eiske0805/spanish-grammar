@@ -1,0 +1,268 @@
+---
+title: "多義語 quedar"
+date: "2021-09-11"
+hero_image: "./quedar.jpg"
+hero_image_alt: "Quédate con migo"
+tags: ["vocabulario"]
+embeddedImagesLocal: ["./quedar.jpg"]
+---
+
+import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  Table,
+  Tbody,
+  Tr,
+  Td,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Center,
+  Text,
+} from "@chakra-ui/react"
+
+export const examples = {
+  exes0: [
+    "1. S が残る",
+    "Quedan 2km hasta el pueblo.",
+    "2. S は 〜 と会うことにする",
+    "He quedado con mi novio a las 9.",
+    "3. S は 〜 に { 良い / 悪い… } 印象を残す",
+    "Si no voy quedaré mal con ellos.",
+    "4. S は { 私 / 君… } にとって、{ 長い / 大きい / 似合っている… }",
+    "Esta falda te queda larga.",
+    "5. S は 〜 にいる、ある。【位置を表す】",
+    "La farmacia queda cerca del edificio.",
+    "6. S は 〜することにする、決める",
+    "Quedamos en comprar la finca en Mallorca.",
+    "7. 〜に居残る、留まる、〜の状態のままでいる",
+    "Me quedé en casa todo el día.",
+    "8. { 〜と一緒 / 〜なし } という状態になる",
+    "Me he quedado sin curro.",
+    "9. 何かを喪失（perdida）することによって生じる変化を表す。（〜になる）",
+    "Se quedó cojo.",
+    "10. 何かのアクションに対するリアクションとしての変化を表す。（〜になる）",
+    "Me quedé impresionado con el dibujo de Ramón.",
+  ],
+  exes1: [
+    "Quedan 2km hasta el pueblo. ※S(主語)は「2km」で3人称複数。よって、quedarも3人称複数形に活用する。",
+    "2km残っている、その村まで。 → あと2kmで村に着く。",
+    "Queda 1mes para los vacaciones. ※Sは「1mes」で3人称単数。",
+    "１ヶ月残っている、バケーションまで。 → あと１ヶ月でバケーションだ。",
+    "A Miguel le Quedaron 100 euros.　※Sは「100euros」で3人称複数。",
+    "100ユーロ残っている、ミゲルには。 → ミゲルは100ユーロしか持っていない。",
+    "Ha quedado mucha bebida después de la fiesta.　※Sは「mucha bebida」で3人称単数。",
+    "たくさんの飲み物が残った、パーティーの後には。",
+  ],
+  exes2: [
+    "He quedado con mi novio a las 9.",
+    "私は彼氏と9時に会うことにした。 → 9時に彼氏と会う。",
+    "¿Dónde quedamos?",
+    "どこで会うことにしようか？ → どこで会う？",
+  ],
+  exes3: [
+    "Si no voy quedaré mal con ellos.",
+    "もし私が行かなかったら、私は彼らに悪い印象を残すだろう。",
+    "Quiero quedar bien con tus padres.",
+    "私は君の両親に良い印象を残したい。",
+  ],
+  exes4: [
+    "Esta falda te queda larga.",
+    "このスカートは、君には長い。",
+    "No te queda bien esa chaqueta.",
+    "君には合わない、そのジャケットは。",
+  ],
+  exes5: [
+    "La farmacia queda {cerca / detrás / al lado} del edificio.",
+    "その薬局は、その建物の {近く / 裏 / 隣} にある。",
+  ],
+  exes6: [
+    "Quedamos en comprar la finca en Mallorca.",
+    "私たちは決めた、マヨルカ島のその不動産を買うことを。",
+    "Quedamos en que tú cocinas y yo lavo los platos.",
+    "私たちは決めた、君は料理をする、私は皿を洗うと。",
+    "A: ¿Vamos a la playa? Mejor vamos al cine. No, de compras.",
+    "A: ビーチに行こうか？　映画に行く方がいいかな。　いや、買い物に行こうか。",
+    "B: ¿En qué quedamos?",
+    "B: どうするの？　はっきり決めて(怒)。",
+  ],
+}
+
+<Box>
+  <GatsbyImage alt="Quédate con migo" image={getImage(props.localImages[0])} />
+</Box>
+
+<Text mt="28">
+  多義語 quedar についてまとめてみる。今回は reflexivo（再起動詞）じゃない普通の
+  quedar。reflexivo の quedarse については
+  <Link to="/quedarse">
+    <span style={{ color: "#A293C2" }}>こちら</span>
+  </Link>
+  を参照。
+</Text>
+
+## quedar と quedarse の用法一覧
+
+S は Sujeto（主語）を表す。1〜6 は quedar 、7〜10 は quedarse。
+
+<Table variant="striped" colorScheme="yellow" mt="4" mb="3">
+  <Tbody>
+    {examples.exes0.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+<Text fontSize={{ base: "xs", sm: "sm" }} mt="1">
+  ※9 と 10 については、
+  <Link to="/pasiva">
+    <span style={{ color: "#A293C2" }}>
+      「Los verbos de cambio（〜になる） 」
+    </span>
+  </Link>
+  も参照。
+</Text>
+
+## 1. S（Sujeto=主語）が残る
+
+S は距離、時間、モノなど、いろいろ使える。
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 2. S は 〜 と会うことにする
+
+「〜と会うことにする、会う約束をする」を意味する。
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes2.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 3. S は 〜 に { 良い / 悪い… } 印象を残す
+
+<Grid
+  templateRows="repeat(２, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+  mb="10"
+  color="cBeige"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    S quedar [ bien / mal … ] con A
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    S は、Aさんに、[良い / 悪い… ] 印象を残す。
+  </GridItem>
+</Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes3.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 4. S は { 私 / 君… } にとって、{ 長い / 大きい / 似合っている… }
+
+<Grid
+  templateRows="repeat(2, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+  color="cBeige"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cGreen" p="2">
+    S [ me / te / le … ] quedar [ largo / pequeño / bien / mal … ]
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cGreen" p="2">
+    S は、[ 私 / 君 / 彼 … ] にとって [ 長い / 小さい / 似合っている /
+    似合ってない … ]。
+  </GridItem>
+</Grid>
+
+<Text mb="10">
+  S は衣類。[ me / te / le … ] は O.I.（Objeto Indirecto 間接目的語）。{" "}
+</Text>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes4.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 5. S は 〜 にいる、ある。（位置を表す）
+
+S の位置を表す。通常、cerca, detrás 等の場所を表す副詞を伴う。
+
+<Table variant="striped" colorScheme="blackAlpha" mt="10" mb="3">
+  <Tbody>
+    {examples.exes5.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 6. S は 〜することにする、決める
+
+<Grid
+  templateRows="repeat(２, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+  mb="10"
+  color="cBeige"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    quedar en 〜
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    〜することに決める
+  </GridItem>
+</Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="1">
+  <Tbody>
+    {examples.exes6.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+<Text fontSize={{ base: "xs", sm: "sm" }} mt="1">
+  ¿En qué quedamos? は決まり文句。何かを決めかねている相手に対し、「
+  どうするの？ どうしたいの？ はっきり決めて！ 」と詰め寄る感じで使う。
+</Text>

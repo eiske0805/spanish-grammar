@@ -1,0 +1,278 @@
+---
+title: "多義語 quedarse（reflexivo）"
+date: "2021-09-12"
+hero_image: "./quedarse.jpg"
+hero_image_alt: "no"
+tags: ["vocabulario"]
+embeddedImagesLocal: ["./quedarse.jpg"]
+---
+
+import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  Table,
+  Tbody,
+  Tr,
+  Td,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Center,
+  Text,
+} from "@chakra-ui/react"
+
+export const examples = {
+  exes0: [
+    "1. S が残る",
+    "Quedan 2km hasta el pueblo.",
+    "2. S は 〜 と会うことにする",
+    "He quedado con mi novio a las 9.",
+    "3. S は 〜 に { 良い / 悪い… } 印象を残す",
+    "Si no voy quedaré mal con ellos.",
+    "4. S は { 私 / 君… } にとって、{ 長い / 大きい / 似合っている… }",
+    "Esta falda te queda larga.",
+    "5. S は 〜 にいる、ある。【位置を表す】",
+    "La farmacia queda cerca del edificio.",
+    "6. S は 〜することにする、決める",
+    "Quedamos en comprar la finca en Mallorca.",
+    "7. 〜に居残る、留まる、〜の状態のままでいる",
+    "Me quedé en casa todo el día.",
+    "8. { 〜と一緒 / 〜なし } という状態になる",
+    "Me he quedado sin curro.",
+    "9. 何かを喪失（perdida）することによって生じる変化を表す。（〜になる）",
+    "Se quedó cojo.",
+    "10. 何かのアクションに対するリアクションとしての変化を表す。（〜になる）",
+    "Me quedé impresionado con el dibujo de Ramón.",
+  ],
+  exes7: [
+    "Me quedé en casa todo el día.",
+    "家にいた、一日中。",
+    "Regresó a España el 1945, y se quedó allí hasta su muerte.",
+    "彼は1943年にスペインに戻り、死ぬまでそこに留まった。",
+    "Te quedaste en silencio.",
+    "君は黙ったままだった。",
+    "Jesús se quedó mirando cómo sus compañeros acosaban a Sergio. ※quedarse + gerundio",
+    "ヘススは、彼のクラスメートがセルヒオをいじめているのをただ見ていた。",
+    "Me quedé escuchando toda la charla detrás de la puerta. ※quedarse + gerundio",
+    "私は聞いていた、扉の向こうの全ての会話を。",
+  ],
+  exes8: [
+    "Si me tengo que quedar, me quedo con Ansu, no con Kubo. ※quedarse = elegir（〜を選ぶ）",
+    "もし私が選ばないといけないなら、私は久保ではなくアンスを選ぶ。",
+    "Me quedo con esa corbata.",
+    "そのネクタイをください。",
+    "Gigante Se quedó con mi libro.",
+    "ジャイアンは、私の本を自分のものとしてしまった。",
+    "Me he quedado sin curro.",
+    "私は仕事がない。",
+  ],
+  exes10: [
+    "Hija, si sales con Nacho, me quedo tranquila.",
+    "もしあなたがナチョと付き合うのなら、私は安心していられるわ。",
+    "Me quedé impresionado con el dibujo de Ramón.",
+    "私はラモンの絵を見て、感銘をうけた。",
+  ],
+}
+
+<Box>
+  <GatsbyImage alt="Quédate con migo" image={getImage(props.localImages[0])} />
+</Box>
+
+<Text mt="28">
+  多義語 quedar についてまとめてみる。今回はreflexivo の quedarse。quedar
+  については
+  <Link to="/quedar">
+    <span style={{ color: "#A293C2" }}>こちら</span>
+  </Link>
+  を参照。
+</Text>
+
+## quedar と quedarse の用法一覧
+
+S は Sujeto（主語）を表す。1〜6 は quedar 、7〜10 は quedarse。
+
+<Table variant="striped" colorScheme="yellow" mt="4" mb="3">
+  <Tbody>
+    {examples.exes0.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+<Text fontSize={{ base: "xs", sm: "sm" }} mt="1">
+  ※9 と 10 については、
+  <Link to="/pasiva">
+    <span style={{ color: "#A293C2" }}>
+      「Los verbos de cambio（〜になる） 」
+    </span>
+  </Link>
+  も参照。
+</Text>
+
+## 7. 〜に居残る、留まる、〜の状態のままでいる
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes7.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 8. { 〜と一緒 / 〜なし } という状態になる
+
+<Grid
+  templateRows="repeat(２, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+  mb="10"
+  color="cBeige"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    quedarse [ con / sin ] 〜
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    [ 〜と一緒 / 〜なし ] という状態になる。
+    ※この和訳は原義で、これを踏まえて色々な意味となる。
+  </GridItem>
+</Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes8.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 9. 何かを喪失（perdida）することによって生じる変化を表す。（〜になる）
+
+<Text mt="4" mb="10">
+  ※この 9. と 10. については、
+  <Link to="/pasiva">
+    <span style={{ color: "#A293C2" }}>
+      「Los verbos de cambio（〜になる） 」
+    </span>
+  </Link>
+  も参照。
+</Text>
+
+<Grid
+  templateRows="repeat(6, 1fr)"
+  templateColumns="repeat(7, 1fr)"
+  gap={1}
+  color="cBeige"
+  mb="10"
+>
+  <Center as={GridItem} rowSpan={6} colSpan={3} bg="cBlue2">
+    Se quedó
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    cojo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    足が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    ciego.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    目が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    sordo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    耳が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    mudo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    口が不自由
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    viudo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    未亡人
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    paro.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    失業
+  </Center>
+</Grid>
+
+## 10. 何かのアクションに対するリアクションとしての変化を表す。（〜になる）
+
+<Grid
+  templateRows="repeat(6, 1fr)"
+  templateColumns="repeat(7, 1fr)"
+  gap={1}
+  color="cBeige"
+>
+  <Center as={GridItem} rowSpan={6} colSpan={3} bg="cBlue2">
+    Se quedó
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    satisfecho.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    満足
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    contento.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    満足
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    tranquilo.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    落ち着き
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    atónito.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    びっくり仰天
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    en blanco.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    頭真っ白
+  </Center>
+  <GridItem rowSpan={1} colSpan={2} bg="cBlue2" px="2">
+    embarazada.
+  </GridItem>
+  <Center as={GridItem} rowSpan={1} colSpan={2} px="1" bg="cBlue2">
+    妊娠
+  </Center>
+</Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="4" mb="3">
+  <Tbody>
+    {examples.exes10.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
