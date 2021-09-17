@@ -1,0 +1,213 @@
+---
+title: "preterito pluscuamperfecto（過去完了）"
+date: "2021-09-17"
+hero_image: "./pluscuamperfecto.jpg"
+hero_image_alt: "clock"
+tags: ["tiempo"]
+embeddedImagesLocal: ["./pluscuamperfecto.jpg", "./pluscuamperfecto2.png"]
+---
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  Table,
+  Tbody,
+  Tr,
+  Td,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Center,
+  Text,
+} from "@chakra-ui/react"
+
+export const examples = {
+  exes1: [
+    "¿Pudiste hablar con Natalia? -Sí, todavía no se había ido a Japón.",
+    "ナタリアと話せた？ -ええ、彼女はまだ日本に行ってなかったから。",
+    "Cuando fui a Japón por primera vez, ya había comido sushi muchas veces.",
+    "私が初めて日本に行った時には、すでに何回も寿司を食べたことがあった。",
+    "Hasta ese día nunca me había ocurrido una cosa así.",
+    "その日までに、１度も私にはそのようなことは起こらなかった。 → その日に初めて、そのようなことが起こった。",
+    "Cuando empezó la carrera, ya había tenido un hijo.",
+    "働き始めた時、すでに子供がいた。",
+    "Cuando llegamos, ya se habían agotado las entradas.",
+    "私たちが着いたときには、チケットは売り切れていた。",
+  ],
+  exes2: [
+    "No pude jugar porque me había hecho daño en una pierna.",
+    "私はプレイできなかった、足を痛めていたから。",
+    "¿Conociste a sus abuelos? -No, ya habían fallecido cuando conocí a mi mujer.",
+    "彼女の祖父母を知ってるの？ -いいえ、妻と知り合った時すでに亡くなっていたから。",
+    "Fui a verlo, pero ya se había marchado.",
+    "彼に会いに行ったけど、すでに出かけていた。",
+    "Cuando el niño volvió de la escuela, su madre aún no había llegado a casa ",
+    "子供が学校から帰ったきた時、母親はまだ家に着いていなかった。",
+    "No quise probar el pastel que le había hecho.",
+    "彼が作ったケーキを、私は食べたくなかった。",
+  ],
+  exes3: [
+    "Perdón, ¿Qué habías dicho?",
+    "すいません、何とおっしゃったのですか？",
+    "¿Habían reservado mesa, señores?",
+    "ご予約されてますか？",
+    "Perdone, doña Isabel, ¿me había llamado?",
+    "すみません、イサベル様、私に電話されましたか？",
+  ],
+  exes4: [
+    "¿Aún vives en un piso? ¿No te habías mudado a un chalé?",
+    "まだアパートに住んでるの？　庭付き一軒家に引っ越すんじゃなかったの？",
+    "¿Todavía no habías dejado de fumar?",
+    "まだタバコやめてないの？",
+    "¿Qué haces aquí? ¿No te habías ido a Japón?",
+    "ここで何してるの？ 日本に行くんじゃなかったの？",
+  ],
+}
+
+<Box>
+  <GatsbyImage alt="Quédate con migo" image={getImage(props.localImages[1])} />
+</Box>
+
+## preterito pluscuamperfecto の 4 つの用法
+
+基本の用法は１と２。でも、3 と 4 も普通に使われている。
+
+<Grid
+  templateRows="repeat(8, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
+    1. 矢印全体 → 過去のある時点まで続く状態・行為・何度か行ったこと。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
+    Hasta que no empezó a ir al instituto, Nacho había sido muy timido.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
+    2. 矢印上の１時点 →
+    過去のある時点より以前の出来事。（それがいつかの言及はなし。）
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
+    Cuando llegué al campo, el partido había empezado.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
+    3. prterito perfecto（現在完了）の代わりに使うことで、丁寧さを表す。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
+    ¿Quién había pedido un café cortado?
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
+    4.
+    すでに完了していると思ってたことが、実は未完了だったことに対する驚きを表す。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
+    ¿Todavía eres profesor auxiliar? ¿No te habían hecho profesor titular?.
+  </GridItem>
+</Grid>
+
+## 基本形
+
+<Box bg="cGray" color="cBeige" p="3" mt="4" mb="8">
+  「 haber の preterito imperfecto（線過去） + pariticipio（過去分詞）」
+</Box>
+
+## haver の preterito imperfecto（線過去）の conjugación（活用）
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    <Tr>
+      <Td>yo</Td>
+      <Td>
+        hablar<span style={{ color: "#E18C7A" }}>ía</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>tú</Td>
+      <Td>
+        hablar<span style={{ color: "#E18C7A" }}>ías</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>él</Td>
+      <Td>
+        hablar<span style={{ color: "#E18C7A" }}>ía</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>nosotros</Td>
+      <Td>
+        hablar<span style={{ color: "#E18C7A" }}>íamos</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>vosotros</Td>
+      <Td>
+        hablar<span style={{ color: "#E18C7A" }}>íais</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>ellos</Td>
+      <Td>
+        hablar<span style={{ color: "#E18C7A" }}>ían</span>
+      </Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## 1. 矢印全体 → 過去のある時点まで続く状態・行為・何度か行ったこと。
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 2. 矢印上の１時点 → 過去のある時点より以前の出来事。（それがいつかの言及はなし。）
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes2.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 3. preterito perfecto（現在完了）の代わりに使うことで、丁寧さを表す。
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes3.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 4. すでに完了していると思ってたことが、実は未完了だったことに対する驚きを表す。
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes4.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
