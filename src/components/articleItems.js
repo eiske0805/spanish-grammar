@@ -11,7 +11,7 @@ const ArticleItems = ({ node }) => {
     <GridItem colSpan={{ base: 6, sm: 3, lg: 2 }} mb="6">
       <Link to={`/${node.slug}`}>
         <Flex>
-          <Box>
+          <Box mt={{ base: 2, sm: 6, md: 8 }}>
             <Box>
               {image ? (
                 <GatsbyImage
