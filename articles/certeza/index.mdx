@@ -1,7 +1,10 @@
 ---
 title: "subjuntivo de certeza（接続法 - 確実さ）"
-date: "2021-09-21"
+date: "2021-09-24"
+hero_image: "./certeza.png"
+hero_image_alt: "No es seguro que Jaime sepa nadar."
 tags: ["subjuntivo"]
+embeddedImagesLocal: ["./certeza.png"]
 ---
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -18,88 +21,164 @@ import {
   Center,
 } from "@chakra-ui/react"
 
-## アイウエオ
+export const examples = {
+  exes1: [
+    "No es cierto que Carlos viva en Argentina.",
+    "確かではない、カルロスがアルゼンチンに住んでいることは。",
+    "No es evidente que Lola tenga novio.",
+    "確かではない、ロラに彼氏がいることは。",
+    "No es obvio que Marta tenga tres hijos.",
+    "明らかではない、マルタに３人の子供がいることは。",
+    "No era verdad que hubiera un terremoto en Tokyo ayer.",
+    "明らかではない、昨日東京で地震があったことは。",
+    "Es indudable que el Barça ganará la liga.",
+    "疑いの余地がある、バルサがリーガを優勝することは。",
+    "No está claro que Messi se haya separado de Antonella.",
+    "明らかではない、メッシがアントネッラと別れたことは。",
+    "No está comprobado que Puigdemont haya sido detenido.",
+    "確認されてない、プッチダモンが逮捕されたことは。",
+    "No está demostrado que Marco matara al vecino.",
+    "証明されてない、マルコが近隣住民を殺害したことは。",
+    "No estoy seguro de que Pedro venga hoy.",
+    "私は確信していない、ペドロが今日来ると。",
+    "Estoy convencido de que Kubo jugará en el Real Madrid.",
+    "私は確信している、久保がレアルマドリードでプレイすると。",
+    "No tengo claro que Andrea haya suspendido matemáticas.",
+    "私にとって明らかではない、アンドレアが数学の単位を落としたことは。",
+    "Tengo clarísimo que María se ha vacunado.",
+    "私にとっては明らかだ、マリアが予防接種を受けたことは。",
+    "No tengo la seguridad de que el Barça quiebre.",
+    "私は確信を持たない、バルサが破産することに対して。",
+    "No tengo constancia de que su teoría sea correcta.",
+    "私は根拠を持たない、彼の理論が正しいことに対して。",
+    "Tengo noticias de que hará sol mañana.",
+    "私は情報を持っている、明日晴れると。",
+  ],
+}
+
+<Box>
+  <GatsbyImage
+    alt="No es seguro que Jaime sepa nadar."
+    image={getImage(props.localImages[0])}
+  />
+</Box>
+
+## certeza（確実さ）を表す表現
+
+<Grid
+  templateRows="repeat(4, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+  color="cYellow2"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue" p="2" pl="3">
+    Es seguro que Jaime sabe nadar.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue" p="2" pl="3">
+    確かだ、ハイメが泳げることは。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue" p="2" pl="3">
+    <span style={{ color: "#E18C7A" }}>No</span> es seguro que Jaime{" "}
+    <span style={{ color: "#E18C7A" }}>sepa</span> nadar.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue" p="2" pl="3">
+    確かではない、ハイメが泳げることは。
+  </GridItem>
+</Grid>
 
 <Grid
   templateRows="repeat(17, 1fr)"
   templateColumns="repeat(12, 1fr)"
   gap={1}
-  mt="4"
+  my="24"
   color="cGray"
 >
-  <Center as={GridItem} rowSpan={1} colSpan={7} bg="cYellow2">
+  <Center as={GridItem} rowSpan={1} colSpan={6} bg="cYellow2">
     主節
   </Center>
-  <Center as={GridItem} rowSpan={1} colSpan={5} bg="cYellow2">
+  <Center as={GridItem} rowSpan={1} colSpan={6} bg="cYellow2">
     従属節
   </Center>
   <GridItem rowSpan={6} colSpan={2} bg="cYellow2" p="2">
     Es
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     cierto（確か）
   </GridItem>
-  <GridItem rowSpan={16} colSpan={5} bg="cYellow2" p="2">
-    que + indicativo.
+  <GridItem rowSpan={16} colSpan={6} bg="cYellow2" p="2">
+    主節が「肯定節」の時は、
     <br />
-    （主節が肯定文の時）
+    → que + S + V（indicativo 直接法).
     <br />
-    <br /> que + subjuntivo.
     <br />
-    （主節が否定文/疑問文の時）
+    主節が「否定/疑問節」の時は、
+    <br />→ que + S + V（subjuntivo 接続法).
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     seguro（確か）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     evidente（明らか）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     obvio（明らか）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     verdad（本当）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     indudable（疑う余地なし）
   </GridItem>
   <GridItem rowSpan={3} colSpan={2} bg="cYellow2" p="2">
     Está
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     claro（明らか）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     comprobado（確認された）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
     demostrado（証明された）
   </GridItem>
   <GridItem rowSpan={2} colSpan={2} bg="cYellow2" p="2">
     Estoy
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    seguro de（私は確信している）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    seguro de（確信）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    convencido de（私は確信している）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    convencido de（確信）
   </GridItem>
   <GridItem rowSpan={5} colSpan={2} bg="cYellow2" p="2">
     tengo
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    claro（私にとって明らか）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    claro（明らか）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    clarísimo（私にとって明らか）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    clarísimo（明らか）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    la seguridad de（私にとって確実）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    la seguridad de（確信）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    constancia de（私にとっては常だ）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    constancia de（根拠）
   </GridItem>
-  <GridItem rowSpan={1} colSpan={5} bg="cYellow2" p="2">
-    noticias de（私は知っている）
+  <GridItem rowSpan={1} colSpan={4} bg="cYellow2" p="2">
+    noticias de（知らせ/情報）
   </GridItem>
 </Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="8" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
