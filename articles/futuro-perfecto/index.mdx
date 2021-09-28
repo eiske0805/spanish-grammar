@@ -1,0 +1,101 @@
+---
+title: "futuro perfecto（未来完了）"
+date: "2021-09-30"
+# hero_image: "./certeza.png"
+# hero_image_alt: "No es seguro que Jaime sepa nadar."
+tags: ["tiempo"]
+# embeddedImagesLocal: ["./certeza.png"]
+---
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  Table,
+  Tbody,
+  Tr,
+  Td,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Center,
+  Text,
+} from "@chakra-ui/react"
+
+## 基本形
+
+<Box bg="cGreen" color="cBeige" p="3" mt="4" mb="8">
+  「 haber の futuro（未来形） + pariticipio（過去分詞）」
+</Box>
+
+## haber の futuro（未来形）の conjugación（活用）
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    <Tr>
+      <Td>yo</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>é</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>tú</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>ás</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>él</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>á</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>nosotros</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>emos</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>vosotros</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>éis</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>ellos</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>án</span>
+      </Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## futuro perfecto（未来完了） の 2 つの用法
+
+<Grid
+  templateRows="repeat(6, 1fr)"
+  templateColumns="repeat(1, 1fr)"
+  gap={1}
+  mt="4"
+  color="cBeige"
+>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    1. Hipótesis de preterito perfecto.（現在完了時制の出来事に対する推測）
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    Sergio todavía no he venido. Habrá tráfico.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cBlue2" p="2">
+    セルヒオはまだ来ていない。渋滞しているんだろう。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    2. 未来の一時点までに完了しているだろうことを述べる時
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    Te traeré tu libro el jueves. Creo que para entonces ya lo habré leído.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} bg="cRed" p="2">
+    木曜日に君の本を持っていくよ。その時までには読み終わってるだろうから。
+  </GridItem>
+</Grid>
