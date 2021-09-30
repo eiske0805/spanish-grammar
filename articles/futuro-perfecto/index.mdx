@@ -22,6 +22,19 @@ import {
   Text,
 } from "@chakra-ui/react"
 
+export const examples = {
+  exes1: [
+    "Dentro de tres años, ya habré podido hablar español con fluidez.",
+    "３年後には、流暢にスペイン語が話せるようになっているだろう。",
+    "No vengas a las siete. Todavía no habré llegado a casa.",
+    "18時に来ないで。まだ家に着いてないだろうから。",
+    "El verano que viene, no habrán ninguas restricciones del covid.",
+    "次の夏には、コロナ対策の各種制限は何もないだろう。",
+    "Al final de este año, Andrea habrá coltado con su novio.※",
+    "今年の終わりには、アンドレアは彼氏と別れているだろう。※",
+  ],
+}
+
 ## 基本形
 
 <Box bg="cGreen" color="cBeige" p="3" mt="4" mb="8">
@@ -81,17 +94,85 @@ import {
   color="cGray"
 >
   <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
-    1.
+    １.
     未来の一時点までに完了しているだろうことを述べる時（いつ完了したかの言及はなし）
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
-    Hasta 2100, habremos tenido la puerta mágica y podremos ir a Japón de España
-    cualquier momento.
+    En 2100, habremos inventado la máquina del tiempo y podremos viajar al
+    pasadoy futuro.
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
-    2. Hipótesis de preterito perfecto.（現在完了時制の出来事に対する推測）
+    ２. Hipótesis de preterito perfecto.（現在完了時制の出来事に対する推測）
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
-    Sergio todavía no he venido. Habrá tráfico.
+    Sergio todavía no ha venido. Habrá habido tráfico.
   </GridItem>
 </Grid>
+
+<Box mt="16">
+  例文
+  １.未来の一時点までに完了しているだろうことを述べる時（いつ完了したかの言及はなし）
+</Box>
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+<Box mt="12">※「別れる」のまとめ</Box>
+
+<Grid
+  templateRows="repeat(6, 1fr)"
+  templateColumns="repeat(12, 1fr)"
+  gap={1}
+  mt="4"
+  color="cBeige"
+>
+  <GridItem rowSpan={1} colSpan={3} bg="cBlue2" p="2">
+    cortar con 人
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={9} bg="cBlue2" p="2">
+    novios（カップル）可、matrimonio（夫婦）可、matrimonioの場合は、法的に離婚までしてない。別居とか。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={12} bg="cBlue" p="2">
+    Andrea ha cortado con Guzman. / Andrea y Guzman han cortado.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={3} bg="cBlue2" p="2">
+    separarse de 人
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={9} bg="cBlue2" p="2">
+    novios（カップル）不可、matrimonio（夫婦）可、matrimonioは、法的に離婚までしてない。別居とか。
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={12} bg="cBlue" p="2">
+    Jaime se ha separado de su mujer y no vive juntos. / El matrimonio se ha
+    separado.
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={3} bg="cBlue2" p="2">
+    divorciarse de 人
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={9} bg="cBlue2" p="2">
+    「離婚する」
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={12} bg="cBlue" p="2">
+    Jaime se ha divorciado de su mujer. / El matrimonio se ha devorciado.
+  </GridItem>
+</Grid>
+
+<Box mt="16">
+  例文 ２. Hipótesis de preterito perfecto.（現在完了時制の出来事に対する推測）
+</Box>
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
