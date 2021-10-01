@@ -3,7 +3,7 @@ title: "Condicional（直接法過去未来）"
 date: "2021-09-06"
 hero_image: "./chica.png"
 hero_image_alt: "勉強してる女の子"
-tags: ["condicional"]
+tags: ["Condicional"]
 embeddedImagesLocal: ["./chica.png"]
 ---
 
@@ -333,18 +333,18 @@ export const examples = {
   gap={1}
   mt="3"
 >
-  <GridItem rowSpan={1} colSpan={1} color="cBeige" align="center" bg="cBlue2">
+  <GridItem rowSpan={1} colSpan={1} color="cBeige3" align="center" bg="cGreen2">
     [条件節]
   </GridItem>
-  <GridItem rowSpan={1} colSpan={1} color="cRed3" align="center" bg="cBlue2">
+  <GridItem rowSpan={1} colSpan={1} color="cGray" align="center" bg="cGreen2">
     [帰結節]
   </GridItem>
   <GridItem
     rowSpan={1}
     colSpan={1}
-    color="cBeige"
+    color="cBeige3"
     px="1"
-    bg="cBlue2"
+    bg="cGreen2"
     align="center"
   >
     仮定を述べる
@@ -352,9 +352,9 @@ export const examples = {
   <GridItem
     rowSpan={1}
     colSpan={1}
-    color="cRed3"
+    color="cGray"
     px="1"
-    bg="cBlue2"
+    bg="cGreen2"
     align="center"
   >
     結論を述べる
@@ -362,23 +362,24 @@ export const examples = {
   <GridItem
     rowSpan={2}
     colSpan={1}
-    color="cBeige"
-    px="1"
+    color="cBeige3"
+    pr="1"
+    pl="2"
     fontSize={{ base: "xs", sm: "sm", md: "md" }}
-    bg="cBlue2"
+    bg="cGreen2"
   >
     Si + imperfecto de subjuntivo
   </GridItem>
-  <GridItem rowSpan={2} colSpan={1} color="cRed3" px="1" bg="cBlue2">
+  <GridItem rowSpan={2} colSpan={1} color="cGray" pr="1" pl="2" bg="cGreen2">
     condicional
   </GridItem>
-  <GridItem rowSpan={2} colSpan={2} color="cBeige" px="1" bg="cBlue2">
+  <GridItem rowSpan={2} colSpan={2} color="cBeige3" pr="1" pl="2" bg="cGreen2">
     Si yo fuera rico,
-    <span style={{ color: "#FFC6BF" }}> siempre muy feliz.</span>
+    <span style={{ color: "#737363" }}> siempre muy feliz.</span>
   </GridItem>
-  <GridItem rowSpan={2} colSpan={2} color="cBeige" px="1" bg="cBlue2">
+  <GridItem rowSpan={2} colSpan={2} color="cBeige3" pr="1" pl="2" bg="cGreen2">
     もし私が金持ちならば、
-    <span style={{ color: "#FFC6BF" }}>すっと幸せに暮らせるだろう。</span>
+    <span style={{ color: "#737363" }}>すっと幸せに暮らせるだろう。</span>
   </GridItem>
 </Grid>
 
@@ -416,11 +417,11 @@ consejo（助言）をする時、 condicional を用いる。「用法 2、条�
   templateRows="repeat(7, 1fr)"
   templateColumns="repeat(2, 1fr)"
   gap={1}
-  color="cYellow2"
+  color="cBeige"
   mt="1"
 >
   {examples.advices.map((ad, index) => (
-    <GridItem key={index} rowSpan={1} colSpan={1} bg="cBlue" p="1">
+    <GridItem key={index} rowSpan={1} colSpan={1} bg="cBlue" p="1" pl="2">
       {ad}
     </GridItem>
   ))}
