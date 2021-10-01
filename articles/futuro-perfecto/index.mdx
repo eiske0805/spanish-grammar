@@ -1,10 +1,10 @@
 ---
 title: "Futuro perfecto（未来完了）"
-date: "2021-09-30"
-# hero_image: "./certeza.png"
-# hero_image_alt: "No es seguro que Jaime sepa nadar."
+date: "2021-10-01"
+hero_image: "./futuro-perfecto.jpg"
+hero_image_alt: "En 2100, habremos inventado la máquina del tiempo."
 tags: ["tiempo"]
-# embeddedImagesLocal: ["./certeza.png"]
+embeddedImagesLocal: ["./futuro-perfecto.jpg"]
 ---
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -24,16 +24,30 @@ import {
 
 export const examples = {
   exes1: [
-    "Dentro de tres años, ya habré podido hablar español con fluidez.",
-    "３年後には、流暢にスペイン語が話せるようになっているだろう。",
+    "Dentro de tres años, Andrea ya habrá tenido otro hijo.",
+    "３年後には、アンドレアはもう1人子供がいるだろう。",
     "No vengas a las siete. Todavía no habré llegado a casa.",
     "18時に来ないで。まだ家に着いてないだろうから。",
-    "El verano que viene, no habrán ninguas restricciones del covid.",
-    "次の夏には、コロナ対策の各種制限は何もないだろう。",
-    "Al final de este año, Andrea habrá coltado con su novio.※",
-    "今年の終わりには、アンドレアは彼氏と別れているだろう。※",
+    "El verano que viene, no habrá ninguna restricción de covid.",
+    "次の夏には、コロナ対策の行動制限は何もないだろう。",
+    "Al final de este año, Andrea habrá cortado con Guzman※",
+    "今年の終わりには、アンドレアはグズマンと別れているだろう。※",
+  ],
+  exes2: [
+    "¡Qué raro! Andrea y Guzman no hablan. -Habrán discutido. ",
+    "ねえ、ちょっと変だよ。アンドレアとグズマンが話してない。 -喧嘩したんだろう。",
+    "El horno está encendido. -Andrea se habrá olvidado de apagarlo.",
+    "オーブンが付けっぱなし。アンドレアが消し忘れたんだろう。",
+    "Andrea está llorando. -Guzman le habrá dado calabazas.",
+    "アンドレアが泣いている。 -グズマンがアンドレアを振ったんだろう。",
+    "Andrea no sonríe. -Nadie habrá puesto 'me gusta' en su instagram.",
+    "アンドレアに笑顔がない。 -誰も彼女のインスタグラムに「いいね」をしなかったんだろう。",
   ],
 }
+
+<Box>
+  <GatsbyImage alt="勉強してる女の子" image={getImage(props.localImages[0])} />
+</Box>
 
 ## 基本形
 
@@ -99,13 +113,13 @@ export const examples = {
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
     En 2100, habremos inventado la máquina del tiempo y podremos viajar al
-    pasadoy futuro.
+    pasado y futuro.
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow" p="2">
-    ２. Hipótesis de preterito perfecto.（現在完了時制の出来事に対する推測）
+    ２. Hipótesis de pretérito perfecto.（現在完了時制の出来事に対する推測）
   </GridItem>
   <GridItem rowSpan={1} colSpan={1} bg="cYellow2" p="2">
-    Sergio todavía no ha venido. Habrá habido tráfico.
+    Andrea todavía no ha venido. Habrá habido tráfico.
   </GridItem>
 </Grid>
 
@@ -133,13 +147,13 @@ export const examples = {
   mt="4"
   color="cBeige"
 >
-  <GridItem rowSpan={1} colSpan={3} bg="cBlue2" p="2">
+  <GridItem rowSpan={1} colSpan={3} bg="cRed" p="2">
     cortar con 人
   </GridItem>
-  <GridItem rowSpan={1} colSpan={9} bg="cBlue2" p="2">
+  <GridItem rowSpan={1} colSpan={9} bg="cRed" p="2">
     novios（カップル）可、matrimonio（夫婦）可、matrimonioの場合は、法的に離婚までしてない。別居とか。
   </GridItem>
-  <GridItem rowSpan={1} colSpan={12} bg="cBlue" p="2">
+  <GridItem rowSpan={1} colSpan={12} bg="cRed" p="2">
     Andrea ha cortado con Guzman. / Andrea y Guzman han cortado.
   </GridItem>
   <GridItem rowSpan={1} colSpan={3} bg="cBlue2" p="2">
@@ -148,28 +162,28 @@ export const examples = {
   <GridItem rowSpan={1} colSpan={9} bg="cBlue2" p="2">
     novios（カップル）不可、matrimonio（夫婦）可、matrimonioは、法的に離婚までしてない。別居とか。
   </GridItem>
-  <GridItem rowSpan={1} colSpan={12} bg="cBlue" p="2">
-    Jaime se ha separado de su mujer y no vive juntos. / El matrimonio se ha
+  <GridItem rowSpan={1} colSpan={12} bg="cBlue2" p="2">
+    Jaime se ha separado de su mujer y no viven juntos. / El matrimonio se ha
     separado.
   </GridItem>
-  <GridItem rowSpan={1} colSpan={3} bg="cBlue2" p="2">
+  <GridItem rowSpan={1} colSpan={3} bg="cGray2" p="2">
     divorciarse de 人
   </GridItem>
-  <GridItem rowSpan={1} colSpan={9} bg="cBlue2" p="2">
+  <GridItem rowSpan={1} colSpan={9} bg="cGray2" p="2">
     「離婚する」
   </GridItem>
-  <GridItem rowSpan={1} colSpan={12} bg="cBlue" p="2">
+  <GridItem rowSpan={1} colSpan={12} bg="cGray2" p="2">
     Jaime se ha divorciado de su mujer. / El matrimonio se ha devorciado.
   </GridItem>
 </Grid>
 
 <Box mt="16">
-  例文 ２. Hipótesis de preterito perfecto.（現在完了時制の出来事に対する推測）
+  例文 ２. Hipótesis de pretérito perfecto.（現在完了時制の出来事に対する推測）
 </Box>
 
 <Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
   <Tbody>
-    {examples.exes1.map(ex => (
+    {examples.exes2.map(ex => (
       <Tr key={ex}>
         <Td>{ex}</Td>
       </Tr>
