@@ -1,0 +1,304 @@
+---
+title: "Condicional compuesto（過去未来完了）"
+date: "2021-11-08"
+hero_image: "./condicionalcompuesto.jpg"
+hero_image_alt: "xxx."
+tags: ["EL tiempo", "Condicional"]
+embeddedImagesLocal: ["./condicionalcompuesto.jpg"]
+---
+
+import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {
+  Table,
+  Tbody,
+  Tr,
+  Td,
+  Box,
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Center,
+  Text,
+} from "@chakra-ui/react"
+
+export const examples = {
+  exes1: [
+    "¿Por qué no viniste ayer? -Es que pensaba que habría estado mi ex.",
+    "どうして昨日来なかったの？　元彼がいると思ったから。",
+    "Tuve suerte con el entrenador de mi juventud. Con otro entrenador, no me habría gustado mucho el fútbol.",
+    "育成年代で良い指導者に巡り会えた。もし、他の指導者だったら、サッカーを嫌いになっていただろう。",
+    "Sin tu ayuda, habría abandonado.",
+    "君の助けがなかったら、諦めていただろう。",
+  ],
+  exes2: [
+    "Si no hubiera perdido el tren, habría tenido ese accidente.",
+    "もし電車を逃してなかったら、あの事故に遭っていただろう。",
+    "Si hubiera marcado un gol en ese partido, se habría hecho futbolista.",
+    "もしあの試合でゴールを決めていたら、サッカー選手になったであろう。",
+    "Si hubiera sido rico, no habría trabajado nada.",
+    "もし金持ちだったなら、全然働かなかっただろう。",
+  ],
+  exes3: [
+    "Habría sido mejor que hubieras comprado ese piso.",
+    "あのマンションを買った方がよかったね。（もう売り切れ。）",
+    "Yo habría seguido saliendo con Marta.",
+    "私なら、マルタと続けてたね。（もう別れてしまった。）",
+    "Yo habría vendido las acciones ese día.",
+    "私ならあの日に株を売っていたね。（大暴落してしまった。）",
+  ],
+  exes4: [
+    "Según Mundo Deportivo, el PSG hubiera intentado rescindir el contrato de Sergio Ramos.",
+    "ムンドデポルティーボ（スポーツ紙）によると、パリサンジェルマンは、セルヒオ・ラモスとの契約を破棄しようとしていたようだ。",
+    "Según El País, Pedro Sànchez hubiera querido introducir la renta básica universal.",
+    "エルパイス（新聞）によると、ペドロ・サンチェスはベーシックインカムを導入したがってたらしい。",
+    "Según As, Cristiano Ronaldo hubiera querido volver al Real Madrid.",
+    "アス（スポーツ紙）によると、クリスティアーノ・ロナウドはレアルマドリーに戻りたかったらしい。",
+  ],
+  exes5: [
+    "Es raro que Pedro tuviera mal humor ayer. -Habría perdido el Barça.",
+    "珍しく昨日ペドロは機嫌が悪かったね。バルサが負けたんだろう。",
+    "Esta mañana, parecía que Pedro no se encontraba bien. -Habría bebido mucho anoche.",
+    "午前中、ペドロは具合悪そうだったね。昨夜飲みすぎたんだろう。",
+  ],
+}
+
+<Box>
+  <GatsbyImage alt="Quédate con migo" image={getImage(props.localImages[0])} />
+</Box>
+
+## 基本形
+
+<Box bg="cGreen" color="cBeige" p="3" mt="4" mb="8">
+  「 haber の condicional（過去未来形） + pariticipio（過去分詞）」
+</Box>
+
+## haber の condicional（過去未来形）の conjugación（活用）
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    <Tr>
+      <Td>yo</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>ía</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>tú</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>ías</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>él</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>ía</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>nosotros</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>íamos</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>vosotros</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>íais</span>
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>ellos</Td>
+      <Td>
+        habr<span style={{ color: "#E18C7A" }}>ían</span>
+      </Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## Condicional compuesto（過去未来完了） の５つの用法
+
+<Table variant="striped" colorScheme="yellow" mt="3">
+  <Tbody>
+    <Tr>
+      <Td>１　過去の出来事に対して事実と異なることを述べる時</Td>
+    </Tr>
+    <Tr>
+      <Td>Habría querido ver los Juegos Olimpicos en Tokio directamente.</Td>
+    </Tr>
+    <Tr>
+      <Td>２　条件文の帰結節で過去を表す</Td>
+    </Tr>
+    <Tr>
+      <Td>Si hubiera estudiado más, habría aprobado el examen.</Td>
+    </Tr>
+    <Tr>
+      <Td>３ もう遅いconsejo（助言）</Td>
+    </Tr>
+    <Tr>
+      <Td>
+        Si fuera Laporta, habría destituido a Koeman antes de empezar esta
+        temporada.
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>４　事実ではないと思っている過去の出来事に言及する時</Td>
+    </Tr>
+    <Tr>
+      <Td>
+        Según Marca, Mbape ya habría decidido ir a jugar en el Real Madrid la
+        próxima temporada.
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>
+        ５　Hipótesis de pretérito
+        pluscuamperfecto.（過去完了時制の出来事に対する推測）
+      </Td>
+    </Tr>
+    <Tr>
+      <Td>Marta no me envió un mensaje anoche. -Se le habría roto el móvil.</Td>
+    </Tr>
+  </Tbody>
+</Table>
+
+## 用法１、過去の出来事に対して事実と異なることを述べる時
+
+これが基本の用法。他の用法は、これの一部と考えることもできる。
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes1.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 用法 2、条件文の帰結節で過去を表す
+
+<Grid
+  templateRows="repeat(8, 1fr)"
+  templateColumns="repeat(2, 1fr)"
+  gap={1}
+  mt="3"
+>
+  <GridItem rowSpan={1} colSpan={1} color="cBeige3" align="center" bg="cRed">
+    [条件節]
+  </GridItem>
+  <GridItem rowSpan={1} colSpan={1} color="cBlack" align="center" bg="cRed">
+    [帰結節]
+  </GridItem>
+  <GridItem
+    rowSpan={1}
+    colSpan={1}
+    color="cBeige3"
+    px="1"
+    bg="cRed"
+    align="center"
+  >
+    仮定を述べる
+  </GridItem>
+  <GridItem
+    rowSpan={1}
+    colSpan={1}
+    color="cBlack"
+    px="1"
+    bg="cRed"
+    align="center"
+  >
+    結論を述べる
+  </GridItem>
+  <GridItem
+    rowSpan={2}
+    colSpan={1}
+    color="cBeige3"
+    pr="1"
+    pl="2"
+    fontSize={{ base: "xs", sm: "sm", md: "md" }}
+    bg="cRed"
+  >
+    Si + pluscuamperfecto de subjuntivo（過去の仮定）
+  </GridItem>
+  <GridItem rowSpan={2} colSpan={1} color="cBlack" pr="1" pl="2" bg="cRed">
+    condicional compuesto（過去の結論）
+  </GridItem>
+  <GridItem rowSpan={2} colSpan={2} color="cBeige3" pr="1" pl="2" bg="cRed">
+    Si hubiera estudiado más,
+    <span style={{ color: "#423D38" }}> habría aprobado el examen.</span>
+  </GridItem>
+  <GridItem rowSpan={2} colSpan={2} color="cBeige3" pr="1" pl="2" bg="cRed">
+    もし私がもっと勉強していたなら、
+    <span style={{ color: "#423D38" }}>試験に受かっていただろう。</span>
+  </GridItem>
+</Grid>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="10">
+  <Tbody>
+    {examples.exes2.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 用法 3、もう遅い consejo（助言）
+
+もう結果が出てしまっていることへの助言。今更結果を変えることはできないことへの助言。
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="10">
+  <Tbody>
+    {examples.exes3.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 用法 4、事実ではないと思っている過去の出来事に言及する時
+
+特に、マスメディアが伝える過去の出来事に対して。
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes4.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
+
+## 用法 5、Hipótesis de pretérito pluscuamperfecto.（過去完了時制の出来事に対する推測）
+
+<Text>
+  Pretérito pluscuamperfecto（過去完了） については、
+  <Link to="/pluscuamperfecto">
+    <span style={{ color: "#A293C2" }}>こちら</span>
+  </Link>
+  を参照。
+</Text>
+
+例文
+
+<Table variant="striped" colorScheme="blackAlpha" mt="3" mb="8">
+  <Tbody>
+    {examples.exes5.map(ex => (
+      <Tr key={ex}>
+        <Td>{ex}</Td>
+      </Tr>
+    ))}
+  </Tbody>
+</Table>
