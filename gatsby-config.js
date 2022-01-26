@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `スペイン語のwebサイト`,
-    description: `このwebサイトは、スペイン在住者が、スペイン語の文法やボキャブラリーを、自分への備忘録として綴っているものです。書かれてる内容は、概ね「 DELE B2 」レベルです。`,
+    description: `このwebサイトは、スペイン在住の筆者が、スペイン語の文法やボキャブラリーを、自分への備忘録的に綴っているものです。書かれてる内容は、概ね「 DELE B2 」レベルです。`,
     author: `spanish-grammar`,
     siteUrl: `https://paginadelcastellano.com/`,
     social: {
